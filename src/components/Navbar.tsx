@@ -1,3 +1,4 @@
+// import { useEffect, useState } from "react"
 import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
@@ -5,19 +6,18 @@ import { ContinentDropdown } from "./ContinentDropdown";
 import InputField from "./InputField";
 
 export function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false)
 
-    const [isScrolled, setIsScrolled] = useState(false)
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    };
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 10)
-        };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, []);
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, []);
-
-    return (
+  return (
     <nav
       className={cn(
         "z-50 fixed w-full transition-all duration-300",
@@ -27,25 +27,23 @@ export function Navbar() {
       <div className="container flex items-center justify-between">
         <a
           className="text-xl font-bold text-primary flex items-center"
-          href="#hero"
+          href="/"
         >
-          <span className="relative z-10">
-            <span className="relative z-10 hidden md:inline">
+          <span className="relative z-10 hidden md:inline">
             <span className="text-glow text-foreground"> Travel </span>{" "}
             App
-            </span>
           </span>
         </a>
 
-        {/* Desktop Nav */}
-
-        <div>
+        <div className="">
+          <div className="w-full max-w-xs">
             <InputField />
+          </div>
         </div>
 
         <div className="flex items-center gap-2">
           <ContinentDropdown />
-            <ThemeToggle />
+          <ThemeToggle />
         </div>
       </div>
     </nav>
