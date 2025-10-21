@@ -77,7 +77,7 @@ export default function CountriesPagination() {
           Countries <span className="text-primary">({total})</span>
         </h2>
 
-        <ul className="divide-y divide-[color:var(--color-border)]">
+        <ul className="divide-y divide-primary">
           {CountriesSliced.map((country) => (
             <li key={country.cca3} className="flex items-center gap-3 py-3">
               <img
@@ -98,7 +98,12 @@ export default function CountriesPagination() {
                 <Button
                   variant="outline"
                   className="mt-2 bg-primary/50 hover:scale-[1.05] cursor-pointer"
-                  aria-label={`Läs mer om ${country.name.common}`}
+                  aria-label={`Read more about ${country.name.common}`}
+                  onClick={() => {
+                    const newPath = `/country/${country.cca3}`;
+                    window.history.pushState({}, "", newPath);
+                    window.dispatchEvent(new PopStateEvent("popstate"));
+                  }}
                 >
                   More
                 </Button>

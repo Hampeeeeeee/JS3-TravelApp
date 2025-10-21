@@ -1,11 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-
-export type UrlParams = {
-  page: number;
-  pageSize: number;
-  query: string;
-  region?: string;
-};
+import type { UrlParams } from "../types/UrlParams";
 
 const DEFAULTS: UrlParams = { page: 1, pageSize: 14, query: "", region: undefined };
 
