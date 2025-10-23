@@ -34,7 +34,7 @@ export default function CountriesPagination() {
         throw new Error("Failed to fetch countries");
       }
       const data = await res.json();
-      return data as Country[];
+      return data;
     },
   });
 
