@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import type { Country } from "./types/Country";
 import LoadSpinner from "./loadspinner";
 import type { Weather } from "./types/Weather";
+import { Earth, HandCoins, Landmark, PersonStanding, ScrollText, Speech, Wallpaper } from "lucide-react";
 
 export default function CountryDetail({ cca3 }: { cca3: string }) {
   const [country, setCountry] = useState<Country | null>(null);
@@ -122,40 +123,103 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
           />
         </div>
 
-        <div className="md:col-span-2 space-y-2 text-sm text-foreground">
-          <p>
-            <strong>Official name:</strong> {country.name.official ?? "—"}
-          </p>
-          <p>
-            <strong>Region:</strong> {country.region ?? "—"}{" "}
-            {country.subregion ? `· ${country.subregion}` : ""}
-          </p>
-          <p>
-            <strong>Capital:</strong> {country.capital?.[0] ?? "—"}
-          </p>
-          <p>
-            <strong>Population:</strong>{" "}
-            {country.population?.toLocaleString() ?? "—"}
-          </p>
-          <p>
-            <strong>Top-level domain:</strong> {country.tld?.join(", ") ?? "—"}
-          </p>
-          <p>
-            <strong>Languages:</strong> {languages}
-          </p>
-          <p>
-            <strong>Currencies:</strong> {currency}
-          </p>
+        <div className="md:col-span-2 space-y-2 text-md text-foreground">
+          <div className="gradient-border p-2 card-hover">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
+                <ScrollText className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-left flex-1">
+                <h4 className="font-semibold text-lg text-muted-foreground">
+                  <strong>Official name:</strong> {country.name.official ?? "—"}
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div className="gradient-border p-2 card-hover">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
+                <Earth className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-left flex-1">
+                <h4 className="font-semibold text-lg text-muted-foreground">
+                  <strong>Region:</strong> {country.region ?? "—"} · {country.subregion ?? "—"}
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div className="gradient-border p-2 card-hover">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
+                <Landmark className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-left flex-1">
+                <h4 className="font-semibold text-lg text-muted-foreground">
+                  <strong>Capital:</strong> {country.capital?.[0] ?? "—"}
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div className="gradient-border p-2 card-hover">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
+                <PersonStanding className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-left flex-1">
+                <h4 className="font-semibold text-lg text-muted-foreground">
+                  <strong>Population:</strong> {country.population?.toLocaleString() ?? "—"}
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div className="gradient-border p-2 card-hover">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
+                <Wallpaper className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-left flex-1">
+                <h4 className="font-semibold text-lg text-muted-foreground">
+                  <strong>Top level domain:</strong> {country.tld?.join(", ") ?? "—"}
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div className="gradient-border p-2 card-hover">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
+                <Speech className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-left flex-1">
+                <h4 className="font-semibold text-lg text-muted-foreground">
+                  <strong>Languages:</strong> {languages}
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div className="gradient-border p-2 card-hover">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
+                <HandCoins className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-left flex-1">
+                <h4 className="font-semibold text-lg text-muted-foreground">
+                  <strong>Currency:</strong> {currency}
+                </h4>
+              </div>
+            </div>
+          </div>
 
-          {/* Weahter Details  */}
+          {/* Weather Details  */}
           <div className="mt-4 border-t border-primary pt-2">
-            <h2 className="font-semibold text-lg text-primary">Current Weather</h2>
+            <h2 className="font-semibold text-lg text-primary">
+              Current Weather
+            </h2>
             {weatherLoading && <p>Loading weather...</p>}
             {weatherError && <p className="text-primary">{weatherError}</p>}
             {weather && (
               <p>
-                🌡️ {weather.temperature}°C {weatherEmoji(weather.temperature)} · 💨{" "}
-                {weather.windspeed} km/h
+                🌡️ {weather.temperature}°C {weatherEmoji(weather.temperature)} ·
+                💨 {weather.windspeed} km/h
               </p>
             )}
             {!weather && !weatherLoading && !weatherError && (

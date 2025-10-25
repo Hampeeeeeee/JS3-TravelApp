@@ -1,20 +1,30 @@
-// import { useEffect, useState } from "react"
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
 import { ContinentDropdown } from "./ContinentDropdown";
 import InputField from "./InputField";
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isDetailRoute, setIsDetailRoute] = useState<boolean>(() =>
+    window.location.pathname.startsWith("/country/")
+  );
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    const handlePop = () => {
+      setIsDetailRoute(window.location.pathname.startsWith("/country/"));
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll)
+    window.addEventListener("popstate", handlePop);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("popstate", handlePop);
+    };
   }, []);
 
   return (
@@ -30,23 +40,23 @@ export function Navbar() {
           href="/"
         >
           <span className="relative z-10 hidden md:inline">
-            <span className="text-glow text-foreground"> Travel </span>{" "}
-            App
+            <span className="text-glow text-foreground"> Travel </span> App
           </span>
         </a>
 
-        <div className="">
+        {!isDetailRoute && (
+          <div className="">
           <div className="w-full max-w-xs">
             <InputField />
           </div>
         </div>
+        )}
 
         <div className="flex items-center gap-2">
-          <ContinentDropdown />
+          {!isDetailRoute && <ContinentDropdown />}
           <ThemeToggle />
         </div>
       </div>
     </nav>
   );
 }
-
