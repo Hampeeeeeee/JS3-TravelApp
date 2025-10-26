@@ -1,66 +1,157 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "./ui/button";
 import type { Country } from "./types/Country";
 import LoadSpinner from "./loadspinner";
 import type { Weather } from "./types/Weather";
-import { Earth, HandCoins, Landmark, PersonStanding, ScrollText, Speech, Wallpaper } from "lucide-react";
+import {
+  Earth,
+  HandCoins,
+  Landmark,
+  PersonStanding,
+  ScrollText,
+  Speech,
+  Wallpaper,
+} from "lucide-react";
+import type { WikiSummary } from "./types/WikiSummary";
 
 export default function CountryDetail({ cca3 }: { cca3: string }) {
   const [country, setCountry] = useState<Country | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
   const [weather, setWeather] = useState<Weather | null>(null);
   const [weatherLoading, setWeatherLoading] = useState(false);
   const [weatherError, setWeatherError] = useState<string | null>(null);
 
-  useEffect(() => {
-    let cancelled = false;
-    async function load() {
-      setLoading(true);
-      setError(null);
-      setWeather(null);
-      try {
-        const res = await fetch(
-          `https://restcountries.com/v3.1/alpha/${encodeURIComponent(
-            cca3
-          )}?fields=name,capital,cca3,region,subregion,population,flags,tld,currencies,languages,capitalInfo,latlng`
-        );
-        if (!res.ok) throw new Error("Country not found");
-        const data = await res.json();
-        const c = Array.isArray(data) ? data[0] : data;
-        if (!cancelled) setCountry(c ?? null);
+  const [wiki, setWiki] = useState<WikiSummary | null>(null);
+  const [wikiLoading, setWikiLoading] = useState(false);
+  const [wikiError, setWikiError] = useState<string | null>(null);
 
-        // --- Fetch weather after country ---
-        const coords = c?.capitalInfo?.latlng ?? c?.latlng;
-        if (coords && coords.length === 2) {
-          const [lat, lon] = coords;
-          setWeatherLoading(true);
+  const cancelRef = useRef(false);
+
+  // shared load function so we can retry parts if needed
+  async function loadAll(cancelFlagRef: { current: boolean }) {
+    setLoading(true);
+    setError(null);
+    setWeather(null);
+    setWeatherError(null);
+    setWiki(null);
+    setWikiError(null);
+
+    try {
+      const res = await fetch(
+        `https://restcountries.com/v3.1/alpha/${encodeURIComponent(
+          cca3
+        )}?fields=name,capital,cca3,region,subregion,population,flags,tld,currencies,languages,capitalInfo,latlng`
+      );
+      if (!res.ok) throw new Error("Country not found");
+      const data = await res.json();
+      const c = Array.isArray(data) ? data[0] : data;
+      if (!cancelFlagRef.current) setCountry(c ?? null);
+
+      // fetch wikipedia summary (uses country name)
+      if (!cancelFlagRef.current) {
+        const title = c?.name?.common ?? c?.name?.official ?? c?.cca3;
+        if (title) {
+          setWikiLoading(true);
+          setWikiError(null);
           try {
+            const slug = encodeURIComponent(String(title).replace(/\s+/g, "_"));
             const wres = await fetch(
-              `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min`
+              `https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`
             );
-            if (!wres.ok) throw new Error("Weather data not found");
+            if (!wres.ok) throw new Error("Wikipedia summary not found");
             const wdata = await wres.json();
-            if (!cancelled && wdata?.current_weather) {
-              setWeather(wdata.current_weather);
+            if (!cancelFlagRef.current) {
+              const url =
+                wdata?.content_urls?.desktop?.page ??
+                wdata?.content_urls?.mobile?.page ??
+                `https://en.wikipedia.org/wiki/${slug}`;
+              setWiki({
+                title: wdata.title ?? title,
+                extract: wdata.extract ?? "",
+                url,
+              });
             }
           } catch (err) {
-            if (!cancelled) setWeatherError((err as Error).message);
+            if (!cancelFlagRef.current) setWikiError((err as Error).message);
           } finally {
-            if (!cancelled) setWeatherLoading(false);
+            if (!cancelFlagRef.current) setWikiLoading(false);
           }
         }
-      } catch (err) {
-        if (!cancelled) setError((err as Error).message);
-      } finally {
-        if (!cancelled) setLoading(false);
       }
+
+      // --- Fetch weather after country ---
+      const coords = c?.capitalInfo?.latlng ?? c?.latlng;
+      if (!cancelFlagRef.current && coords && coords.length === 2) {
+        const [lat, lon] = coords;
+        setWeatherLoading(true);
+        try {
+          const wres = await fetch(
+            `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min&timezone=auto`
+          );
+          if (!wres.ok) throw new Error("Weather data not found");
+          const wdata = await wres.json();
+          if (!cancelFlagRef.current && wdata?.current_weather) {
+            setWeather(wdata.current_weather);
+          }
+        } catch (err) {
+          if (!cancelFlagRef.current) setWeatherError((err as Error).message);
+        } finally {
+          if (!cancelFlagRef.current) setWeatherLoading(false);
+        }
+      }
+    } catch (err) {
+      if (!cancelFlagRef.current) setError((err as Error).message);
+    } finally {
+      if (!cancelFlagRef.current) setLoading(false);
     }
-    load();
+  }
+
+  // initial load + cleanup
+  useEffect(() => {
+    cancelRef.current = false;
+    loadAll(cancelRef);
     return () => {
-      cancelled = true;
+      cancelRef.current = true;
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cca3]);
+
+  // retry handlers
+  const retryCountry = () => {
+    cancelRef.current = false;
+    loadAll(cancelRef);
+  };
+
+  const retryWiki = async () => {
+    if (!country) return;
+    setWiki(null);
+    setWikiError(null);
+    setWikiLoading(true);
+    const title =
+      country.name?.common ?? country.name?.official ?? country.cca3;
+    try {
+      const slug = encodeURIComponent(String(title).replace(/\s+/g, "_"));
+      const wres = await fetch(
+        `https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`
+      );
+      if (!wres.ok) throw new Error("Wikipedia summary not found");
+      const wdata = await wres.json();
+      setWiki({
+        title: wdata.title ?? title,
+        extract: wdata.extract ?? "",
+        url:
+          wdata?.content_urls?.desktop?.page ??
+          wdata?.content_urls?.mobile?.page ??
+          `https://en.wikipedia.org/wiki/${slug}`,
+      });
+    } catch (err) {
+      setWikiError((err as Error).message);
+    } finally {
+      setWikiLoading(false);
+    }
+  };
 
   if (loading)
     return (
@@ -69,7 +160,18 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
       </p>
     );
 
-  if (error) return <p className="p-4 text-center text-primary">{error}</p>;
+  if (error)
+    return (
+      <div className="p-4 text-center">
+        <p className="mb-3 text-primary">
+          Something went wrong loading country data.
+        </p>
+        <p className="mb-4 text-sm text-foreground">{error}</p>
+        <div className="flex justify-center">
+          <Button onClick={retryCountry}>Try again</Button>
+        </div>
+      </div>
+    );
 
   if (!country)
     return (
@@ -93,7 +195,6 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
   };
 
   return (
-    // Country Details
     <div className="mx-auto max-w-[950px] p-4">
       <div className="mb-4 flex items-center justify-between">
         <h1 className="text-2xl font-semibold">{country.name.common}</h1>
@@ -143,12 +244,13 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
               </div>
               <div className="text-left flex-1">
                 <h4 className="font-semibold text-lg text-muted-foreground">
-                  <strong>Region:</strong> {country.region ?? "—"} · {country.subregion ?? "—"}
+                  <strong>Region:</strong>{" "} {country.region} · {country.subregion ?? "—"}
                 </h4>
               </div>
             </div>
           </div>
           <div className="gradient-border p-2 card-hover">
+            
             <div className="flex items-center gap-4">
               <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
                 <Landmark className="h-6 w-6 text-primary" />
@@ -178,6 +280,7 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
                 <Wallpaper className="h-6 w-6 text-primary" />
               </div>
               <div className="text-left flex-1">
+                
                 <h4 className="font-semibold text-lg text-muted-foreground">
                   <strong>Top level domain:</strong> {country.tld?.join(", ") ?? "—"}
                 </h4>
@@ -209,7 +312,8 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
             </div>
           </div>
 
-          {/* Weather Details  */}
+          {/* Weather Details */}
+
           <div className="mt-4 border-t border-primary pt-2">
             <h2 className="font-semibold text-lg text-primary">
               Current Weather
@@ -224,6 +328,47 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
             )}
             {!weather && !weatherLoading && !weatherError && (
               <p>— No weather data available —</p>
+            )}
+          </div>
+
+          {/* Wikipedia Summary */}
+
+          <div className="mt-4 border-t border-primary pt-2">
+            <h2 className="font-semibold text-lg text-primary text-glow">
+              About
+            </h2>
+
+            {wikiLoading && <p>Loading article summary...</p>}
+
+            {wikiError && (
+              <div className="mt-2">
+                <p className="text-primary mb-2">
+                  Failed to load Wikipedia summary.
+                </p>
+                <p className="mb-2 text-sm text-foreground">{wikiError}</p>
+                <div className="flex gap-2">
+                  <Button onClick={retryWiki}>Try again</Button>
+                </div>
+              </div>
+            )}
+
+            {wiki && !wikiError && (
+              <div className="mt-2 text-sm text-foreground">
+                <h3 className="font-semibold">{wiki.title}</h3>
+                <p className="mt-2">
+                  {wiki.extract || "No summary available."}
+                </p>
+                <p className="mt-2">
+                  <a
+                    className="text-primary underline"
+                    href={wiki.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Read full article on Wikipedia
+                  </a>
+                </p>
+              </div>
             )}
           </div>
         </div>

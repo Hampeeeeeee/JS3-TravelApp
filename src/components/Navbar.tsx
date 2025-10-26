@@ -39,7 +39,7 @@ export function Navbar() {
           className="text-xl font-bold text-primary flex items-center"
           href="/"
         >
-          <span className="relative z-10 hidden md:inline">
+          <span className="relative z-10">
             <span className="text-glow text-foreground"> Travel </span> App
           </span>
         </a>
