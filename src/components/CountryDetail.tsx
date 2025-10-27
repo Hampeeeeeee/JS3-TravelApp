@@ -27,6 +27,10 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
   const [wikiLoading, setWikiLoading] = useState(false);
   const [wikiError, setWikiError] = useState<string | null>(null);
 
+  const [image, setImage] = useState<string[]>([]);
+  const [imageLoading, setImageLoading] = useState(false);
+  const [imageError, setImageError] = useState<string | null>(null);
+
   const cancelRef = useRef(false);
 
   // shared load function so we can retry parts if needed
@@ -37,6 +41,8 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
     setWeatherError(null);
     setWiki(null);
     setWikiError(null);
+    setImage([]);
+    setImageError(null);
 
     try {
       const res = await fetch(
@@ -99,6 +105,39 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
           if (!cancelFlagRef.current) setWeatherError((err as Error).message);
         } finally {
           if (!cancelFlagRef.current) setWeatherLoading(false);
+        }
+      }
+
+      // fetching Unsplash images using the selected country's name
+      if (!cancelFlagRef.current) {
+        const countryQuery = String(c?.name?.common);
+        if (countryQuery) {
+          setImageLoading(true);
+          setImageError(null);
+          try {
+            const q = encodeURIComponent(countryQuery);
+            const key = import.meta.env.VITE_TRAVEL_APP_API_KEY ?? import.meta.env.TRAVEL_APP_API_KEY;
+            if (!key) throw new Error("Missing Unsplash API key");
+
+            // request 3 photos and store their urls
+            const imageRes = await fetch(
+              `https://api.unsplash.com/search/photos?query=${q}&per_page=3&client_id=${key}`
+            );
+            if (!imageRes.ok) throw new Error(`Image API error: ${imageRes.status}`);
+            const imageData = await imageRes.json();
+            const urls =
+              (imageData?.results ?? [])
+                .map((result: { urls: { regular: string; small: string } }) => result?.urls?.regular ?? result?.urls?.small)
+                .filter(Boolean) || [];
+
+            if (!urls.length) throw new Error("No images found for this country");
+            if (!cancelFlagRef.current) setImage(urls);
+          } catch (err) {
+            if (!cancelFlagRef.current) setImageError((err as Error).message);
+            if (!cancelFlagRef.current) setImage([]);
+          } finally {
+            if (!cancelFlagRef.current) setImageLoading(false);
+          }
         }
       }
     } catch (err) {
@@ -222,6 +261,25 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
             className="w-full rounded border object-cover"
             loading="lazy"
           />
+          {imageLoading && (
+            <p className="mt-2 text-sm text-foreground">Loading image...</p>
+          )}
+          {imageError && (
+            <p className="mt-2 text-sm text-primary">{imageError}</p>
+          )}
+          {image.length > 0 && (
+            <div className="mt-2 grid grid-cols-1 gap-2 md:col-span-1">
+              {image.slice(0, 3).map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt={`${country.name.common} photo ${i + 1}`}
+                  className="w-full h-40 md:h-56 rounded border object-cover"
+                  loading="lazy"
+                />
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="md:col-span-2 space-y-2 text-md text-foreground">
@@ -354,8 +412,8 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
 
             {wiki && !wikiError && (
               <div className="mt-2 text-sm text-foreground">
-                <h3 className="font-semibold">{wiki.title}</h3>
-                <p className="mt-2">
+                <h3 className="font-bold">{wiki.title}</h3>
+                <p className="mt-2 font-semibold">
                   {wiki.extract || "No summary available."}
                 </p>
                 <p className="mt-2">
