@@ -25,7 +25,7 @@ export function ContinentDropdown() {
 
   return (
     <div>
-      <DropdownMenu>
+      <DropdownMenu modal={false}>
         <DropdownMenuTrigger className="text-glow text-foreground font-bold cursor-pointer hover:scale-[1.1]">
           Continents
         </DropdownMenuTrigger>
