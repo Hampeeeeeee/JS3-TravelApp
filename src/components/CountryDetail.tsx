@@ -51,24 +51,24 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
 
       // fetch wikipedia summary (uses country name)
       if (!cancelFlagRef.current) {
-        const title = c?.name?.common ?? c?.name?.official ?? c?.cca3;
-        if (title) {
+        const countryTitle = c?.name?.common ?? c?.name?.official ?? c?.cca3;
+        if (countryTitle) {
           setWikiLoading(true);
           setWikiError(null);
           try {
-            const slug = encodeURIComponent(String(title).replace(/\s+/g, "_"));
-            const wres = await fetch(
+            const slug = encodeURIComponent(String(countryTitle).replace(/\s+/g, "_"));
+            const wikires = await fetch(
               `https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`
             );
-            if (!wres.ok) throw new Error("Wikipedia summary not found");
-            const wdata = await wres.json();
+            if (!wikires.ok) throw new Error("Wikipedia summary not found");
+            const wdata = await wikires.json();
             if (!cancelFlagRef.current) {
               const url =
                 wdata?.content_urls?.desktop?.page ??
                 wdata?.content_urls?.mobile?.page ??
                 `https://en.wikipedia.org/wiki/${slug}`;
               setWiki({
-                title: wdata.title ?? title,
+                title: wdata.title ?? countryTitle,
                 extract: wdata.extract ?? "",
                 url,
               });
@@ -133,11 +133,11 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
       country.name?.common ?? country.name?.official ?? country.cca3;
     try {
       const slug = encodeURIComponent(String(title).replace(/\s+/g, "_"));
-      const wres = await fetch(
+      const wikires = await fetch(
         `https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`
       );
-      if (!wres.ok) throw new Error("Wikipedia summary not found");
-      const wdata = await wres.json();
+      if (!wikires.ok) throw new Error("Wikipedia summary not found");
+      const wdata = await wikires.json();
       setWiki({
         title: wdata.title ?? title,
         extract: wdata.extract ?? "",
