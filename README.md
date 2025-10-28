@@ -16,4 +16,4 @@ Other info, such as weather and a short description, is also available for the u
 * Description API: https://en.wikipedia.org/api/rest_v1/
 
 # Published Website
-* URL: travelapp-hampus.netlify.app
+* URL: https://travelapp-hampus.netlify.app
