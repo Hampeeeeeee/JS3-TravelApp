@@ -307,7 +307,7 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
               </div>
               <div className="text-left flex-1">
                 <h4 className="font-semibold text-lg text-muted-foreground">
-                  <strong>Official name:</strong> {country.name.official ?? "—"}
+                  <span aria-label="Official name"></span><strong>Official name:</strong> {country.name.official ?? "—"}
                 </h4>
               </div>
             </div>
@@ -319,8 +319,7 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
               </div>
               <div className="text-left flex-1">
                 <h4 className="font-semibold text-lg text-muted-foreground">
-                  <strong>Region:</strong> {country.region} ·{" "}
-                  {country.subregion ?? "—"}
+                  <span aria-label="Region"></span><strong>Region:</strong> {country.region} · {country.subregion ?? "—"}
                 </h4>
               </div>
             </div>
@@ -332,7 +331,7 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
               </div>
               <div className="text-left flex-1">
                 <h4 className="font-semibold text-lg text-muted-foreground">
-                  <strong>Capital:</strong> {country.capital?.[0] ?? "—"}
+                  <span aria-label="Capital"></span><strong>Capital:</strong> {country.capital?.[0] ?? "—"}
                 </h4>
               </div>
             </div>
@@ -344,21 +343,7 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
               </div>
               <div className="text-left flex-1">
                 <h4 className="font-semibold text-lg text-muted-foreground">
-                  <strong>Population:</strong>{" "}
-                  {country.population?.toLocaleString() ?? "—"}
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div className="gradient-border p-2 card-hover">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
-                <Wallpaper className="h-6 w-6 text-primary" />
-              </div>
-              <div className="text-left flex-1">
-                <h4 className="font-semibold text-lg text-muted-foreground">
-                  <strong>Top level domain:</strong>{" "}
-                  {country.tld?.join(", ") ?? "—"}
+                  <span aria-label="Population"></span><strong>Population:</strong>{" "}{country.population?.toLocaleString() ?? "—"}
                 </h4>
               </div>
             </div>
@@ -370,7 +355,7 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
               </div>
               <div className="text-left flex-1">
                 <h4 className="font-semibold text-lg text-muted-foreground">
-                  <strong>Languages:</strong> {languages}
+                  <span aria-label="Languages"></span><strong>Languages:</strong> {languages}
                 </h4>
               </div>
             </div>
@@ -382,7 +367,20 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
               </div>
               <div className="text-left flex-1">
                 <h4 className="font-semibold text-lg text-muted-foreground">
-                  <strong>Currency:</strong> {currency}
+                  <span aria-label="Currency"><strong>Currency:</strong> {currency}</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div className="gradient-border p-2 card-hover">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
+                <Wallpaper className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-left flex-1">
+                <h4 className="font-semibold text-lg text-muted-foreground">
+                  <span aria-label="Top level domain"><strong>Top level domain:</strong></span>{" "}
+                  {country.tld?.join(", ") ?? "—"} 
                 </h4>
               </div>
             </div>

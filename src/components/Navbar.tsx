@@ -49,7 +49,7 @@ export function Navbar() {
 
         {!isDetailRoute && (
           <div className="">
-          <div className="w-full max-w-xs">
+          <div className="w-full max-w-xs px-4">
             <InputField />
           </div>
         </div>
