@@ -206,31 +206,29 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
   // loadspinner while loading
   if (loading)
     return (
-      <p className="p-4 text-center">
+      <section className="p-4 text-center" aria-busy="true">
         <LoadSpinner />
-      </p>
+      </section>
     );
 
-  // error state  
   if (error)
     return (
-      <div className="p-4 text-center">
-        <p className="mb-3 text-primary">
+      <section className="p-4 text-center" role="alert">
+        <p className="mb-3 text-primary font-semibold">
           Something went wrong loading country data.
         </p>
         <p className="mb-4 text-sm text-foreground">{error}</p>
-        <div className="flex justify-center">
-          <Button onClick={retryCountry}>Try again</Button>
-        </div>
-      </div>
-    );
-  // no country selected
-  if (!country)
-    return (
-      <p className="p-4 text-center text-foreground">No country selected.</p>
+        <Button onClick={retryCountry}>Try again</Button>
+      </section>
     );
 
-  // prepare display values
+  if (!country)
+    return (
+      <section className="p-4 text-center text-foreground">
+        No country selected.
+      </section>
+    );
+
   const languages = country.languages
     ? Object.values(country.languages).join(", ")
     : "—";
@@ -241,7 +239,6 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
         .join(", ")
     : "—";
 
-    // weather emoji based on temperature
   const weatherEmoji = (temperature: number) => {
     if (temperature <= 10) return "❄️";
     if (temperature <= 15) return "🌥️";
@@ -249,35 +246,40 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
     return "☀️";
   };
 
-  // render component
   return (
-    <div className="mx-auto max-w-[950px] p-4">
-      <div className="mb-4 flex items-center justify-between">
+    <main className="mx-auto max-w-[950px] p-4">
+      <header className="mb-4 flex items-center justify-between">
         <h1 className="text-2xl font-semibold">{country.name.common}</h1>
-        <div>
-          <Button
-            className="bg-primary/50 hover:scale-[1.05] cursor-pointer text-foreground"
-            onClick={() => {
-              if (window.history.length > 1) window.history.back();
-              else {
-                window.history.pushState({}, "", "/");
-                window.dispatchEvent(new PopStateEvent("popstate"));
-              }
-            }}
-          >
-            Back
-          </Button>
-        </div>
-      </div>
+        <Button
+          className="bg-primary/50 hover:scale-[1.05] cursor-pointer text-foreground"
+          onClick={() => {
+            if (window.history.length > 1) window.history.back();
+            else {
+              window.history.pushState({}, "", "/");
+              window.dispatchEvent(new PopStateEvent("popstate"));
+            }
+          }}
+          aria-label="Go back to previous page"
+        >
+          Back
+        </Button>
+      </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
-        <div className="md:col-span-1">
-          <img
-            src={country.flags?.png || country.flags?.svg}
-            alt={country.flags?.alt || `${country.name.common} flag`}
-            className="w-full rounded border object-cover"
-            loading="lazy"
-          />
+      <article className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
+        {/* FLAG & IMAGES */}
+        <aside className="md:col-span-1">
+          <figure>
+            <img
+              src={country.flags?.png || country.flags?.svg}
+              alt={country.flags?.alt || `${country.name.common} flag`}
+              className="w-full rounded border object-cover"
+              loading="lazy"
+            />
+            <figcaption className="sr-only">
+              Flag of {country.name.common}
+            </figcaption>
+          </figure>
+
           {imageLoading && (
             <p className="mt-2 text-sm text-foreground">Loading image...</p>
           )}
@@ -285,113 +287,48 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
             <p className="mt-2 text-sm text-primary">{imageError}</p>
           )}
           {image.length > 0 && (
-            <div className="mt-2 grid grid-cols-1 gap-2 md:col-span-1">
-              {image.slice(0, 3).map((src, i) => (
-                <img
-                  key={i}
-                  src={src}
-                  alt={`${country.name.common} photo ${i + 1}`}
-                  className="w-full h-40 md:h-56 rounded border object-cover"
-                  loading="lazy"
-                />
-              ))}
-            </div>
+            <section aria-label={`${country.name.common} photos`}>
+              <ul className="mt-2 grid grid-cols-1 gap-2 md:col-span-1">
+                {image.slice(0, 3).map((src, i) => (
+                  <li key={i}>
+                    <img
+                      src={src}
+                      alt={`${country.name.common} landscape ${i + 1}`}
+                      className="w-full h-40 md:h-56 rounded border object-cover"
+                      loading="lazy"
+                    />
+                  </li>
+                ))}
+              </ul>
+            </section>
           )}
-        </div>
+        </aside>
 
-        <div className="md:col-span-2 space-y-2 text-md text-foreground">
-          <div className="gradient-border p-2 card-hover">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
-                <ScrollText className="h-6 w-6 text-primary" />
-              </div>
-              <div className="text-left flex-1">
-                <h4 className="font-semibold text-lg text-muted-foreground">
-                  <span aria-label="Official name"></span><strong>Official name:</strong> {country.name.official ?? "—"}
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div className="gradient-border p-2 card-hover">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
-                <Earth className="h-6 w-6 text-primary" />
-              </div>
-              <div className="text-left flex-1">
-                <h4 className="font-semibold text-lg text-muted-foreground">
-                  <span aria-label="Region"></span><strong>Region:</strong> {country.region} · {country.subregion ?? "—"}
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div className="gradient-border p-2 card-hover">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
-                <Landmark className="h-6 w-6 text-primary" />
-              </div>
-              <div className="text-left flex-1">
-                <h4 className="font-semibold text-lg text-muted-foreground">
-                  <span aria-label="Capital"></span><strong>Capital:</strong> {country.capital?.[0] ?? "—"}
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div className="gradient-border p-2 card-hover">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
-                <PersonStanding className="h-6 w-6 text-primary" />
-              </div>
-              <div className="text-left flex-1">
-                <h4 className="font-semibold text-lg text-muted-foreground">
-                  <span aria-label="Population"></span><strong>Population:</strong>{" "}{country.population?.toLocaleString() ?? "—"}
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div className="gradient-border p-2 card-hover">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
-                <Speech className="h-6 w-6 text-primary" />
-              </div>
-              <div className="text-left flex-1">
-                <h4 className="font-semibold text-lg text-muted-foreground">
-                  <span aria-label="Languages"></span><strong>Languages:</strong> {languages}
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div className="gradient-border p-2 card-hover">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
-                <HandCoins className="h-6 w-6 text-primary" />
-              </div>
-              <div className="text-left flex-1">
-                <h4 className="font-semibold text-lg text-muted-foreground">
-                  <span aria-label="Currency"><strong>Currency:</strong> {currency}</span>
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div className="gradient-border p-2 card-hover">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
-                <Wallpaper className="h-6 w-6 text-primary" />
-              </div>
-              <div className="text-left flex-1">
-                <h4 className="font-semibold text-lg text-muted-foreground">
-                  <span aria-label="Top level domain"><strong>Top level domain:</strong></span>{" "}
-                  {country.tld?.join(", ") ?? "—"} 
-                </h4>
-              </div>
-            </div>
-          </div>
+        {/* COUNTRY INFO */}
+        <section
+          className="md:col-span-2 space-y-2 text-md text-foreground"
+          aria-labelledby="country-info"
+        >
+          <h2 id="country-info" className="sr-only">
+            Country Information
+          </h2>
 
-          {/* Weather Details */}
+          {/* FACT CARDS */}
+          <dl className="space-y-2">
+            <InfoItem icon={ScrollText} label="Official name" value={country.name.official ?? "—"} />
+            <InfoItem icon={Earth} label="Region" value={`${country.region} · ${country.subregion ?? "—"}`} />
+            <InfoItem icon={Landmark} label="Capital" value={country.capital?.[0] ?? "—"} />
+            <InfoItem icon={PersonStanding} label="Population" value={country.population?.toLocaleString() ?? "—"} />
+            <InfoItem icon={Speech} label="Languages" value={languages} />
+            <InfoItem icon={HandCoins} label="Currency" value={currency} />
+            <InfoItem icon={Wallpaper} label="Top level domain" value={country.tld?.join(", ") ?? "—"} />
+          </dl>
 
-          <div className="mt-4 border-t border-primary pt-2">
-            <h2 className="font-semibold text-lg text-primary">
+          {/* WEATHER */}
+          <section className="mt-4 border-t border-primary pt-2">
+            <h3 className="font-semibold text-lg text-primary">
               Current Weather
-            </h2>
+            </h3>
             {weatherLoading && <p>Loading weather...</p>}
             {weatherError && <p className="text-primary">{weatherError}</p>}
             {weather && (
@@ -403,32 +340,24 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
             {!weather && !weatherLoading && !weatherError && (
               <p>— No weather data available —</p>
             )}
-          </div>
+          </section>
 
-          {/* Wikipedia Summary */}
-
-          <div className="mt-4 border-t border-primary pt-2">
-            <h2 className="font-semibold text-lg text-primary text-glow">
-              About
-            </h2>
-
+          {/* WIKIPEDIA */}
+          <section className="mt-4 border-t border-primary pt-2">
+            <h3 className="font-semibold text-lg text-primary">About</h3>
             {wikiLoading && <p>Loading article summary...</p>}
-
             {wikiError && (
-              <div className="mt-2">
+              <div>
                 <p className="text-primary mb-2">
                   Failed to load Wikipedia summary.
                 </p>
                 <p className="mb-2 text-sm text-foreground">{wikiError}</p>
-                <div className="flex gap-2">
-                  <Button onClick={retryWiki}>Try again</Button>
-                </div>
+                <Button onClick={retryWiki}>Try again</Button>
               </div>
             )}
-
             {wiki && !wikiError && (
-              <div className="mt-2 text-sm text-foreground">
-                <h3 className="font-bold">{wiki.title}</h3>
+              <article className="mt-2 text-sm text-foreground">
+                <h4 className="font-bold">{wiki.title}</h4>
                 <p className="mt-2 font-semibold">
                   {wiki.extract || "No summary available."}
                 </p>
@@ -442,9 +371,35 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
                     Read full article on Wikipedia
                   </a>
                 </p>
-              </div>
+              </article>
             )}
-          </div>
+          </section>
+        </section>
+      </article>
+    </main>
+  );
+}
+
+function InfoItem({
+  icon: Icon,
+  label,
+  value,
+}: {
+  icon: React.ElementType;
+  label: string;
+  value: string;
+}) {
+  return (
+    <div className="gradient-border p-2 card-hover">
+      <div className="flex items-center gap-4">
+        <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
+          <Icon className="h-6 w-6 text-primary" aria-hidden="true" />
+        </div>
+        <div className="text-left flex-1">
+          <dt className="font-semibold text-lg text-muted-foreground">
+            {label}:
+          </dt>
+          <dd>{value}</dd>
         </div>
       </div>
     </div>
