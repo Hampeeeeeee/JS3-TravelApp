@@ -13,7 +13,7 @@ Other info, such as weather and a short description, is also available for the u
 * Countries API: https://restcountries.com/
 * Images API: https://unsplash.com/
 * Weather API: https://open-meteo.com/
-* https://en.wikipedia.org/api/rest_v1/
+* Description API: https://en.wikipedia.org/api/rest_v1/
 
 # Published Website
 
