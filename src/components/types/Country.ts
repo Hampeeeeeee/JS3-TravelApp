@@ -1,3 +1,4 @@
+// Define the Country type used in the application
 export type Country = {
   name: { common: string; official?: string };
   capital?: string[];

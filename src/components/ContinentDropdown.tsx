@@ -8,10 +8,12 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useUrlParams } from "./hooks/useUrlParams";
 
+// ContinentDropdown component
 export function ContinentDropdown() {
   const [params, setParams] = useUrlParams();
   const continent = params.region ?? "All";
 
+  // List of continent options
   const items = [
     "All",
     "Africa",
@@ -23,6 +25,7 @@ export function ContinentDropdown() {
     "South America",
   ];
 
+  // render component
   return (
     <div>
       <DropdownMenu modal={false}>

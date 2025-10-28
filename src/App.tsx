@@ -3,6 +3,7 @@ import CountriesPagination from "./components/countries-pagination";
 import { Navbar } from "./components/Navbar";
 import CountryDetail from "./components/CountryDetail";
 
+// App component
 function App() {
   const [path, setPath] = useState(() => window.location.pathname);
 
@@ -16,6 +17,7 @@ function App() {
   const isCountry = path.startsWith("/country/");
   const cca3 = isCountry ? decodeURIComponent(path.split("/")[2] || "") : null;
 
+  // render component
   return (
     <>
       <nav>

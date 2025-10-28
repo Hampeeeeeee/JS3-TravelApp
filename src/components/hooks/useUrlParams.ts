@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
 import type { UrlParams } from "../types/UrlParams";
 
+// Default URL parameters
 const DEFAULTS: UrlParams = { page: 1, pageSize: 14, query: "", region: undefined };
 
+// Function to read URL parameters
 function readParams(): UrlParams {
   const p = new URLSearchParams(window.location.search);
   const rawPage = Number(p.get("page") ?? DEFAULTS.page);
@@ -15,15 +17,18 @@ function readParams(): UrlParams {
   };
 }
 
+// Custom hook to manage URL parameters
 export function useUrlParams() {
   const [params, setParamsState] = useState<UrlParams>(readParams);
 
+  // Sync state with URL changes
   useEffect(() => {
     const onPop = () => setParamsState(readParams());
     window.addEventListener("popstate", onPop);
     return () => window.removeEventListener("popstate", onPop);
   }, []);
 
+  // Function to update URL parameters
   const setParams = useCallback((updates: Partial<UrlParams>) => {
     const p = new URLSearchParams(window.location.search);
 

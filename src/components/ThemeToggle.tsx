@@ -1,6 +1,7 @@
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 
+// ThemeToggle component
 export const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -15,6 +16,7 @@ export const ThemeToggle = () => {
     }
   }, []);
 
+  // Function to toggle theme
   const toggleTheme = () => {
     if (isDarkMode) {
       document.documentElement.classList.remove("dark");
@@ -27,6 +29,7 @@ export const ThemeToggle = () => {
     }
   };
 
+  // render component
   return (
     <button onClick={toggleTheme} className="cursor-pointer">
       {" "}

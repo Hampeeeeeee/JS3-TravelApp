@@ -4,6 +4,8 @@ import { Button } from "./ui/button";
 import { useUrlParams } from "./hooks/useUrlParams";
 import type { Country } from "./types/Country";
 
+
+// CountriesPagination component
 export default function CountriesPagination() {
   const [params, setParams] = useUrlParams();
   const page = params.page;
@@ -30,8 +32,8 @@ export default function CountriesPagination() {
     },
   });
 
+  // continent filtering and search query filtering
   const filtered = countries.filter((c) => {
-    // continent filtering
     let regionMatch = true;
     if (selectedContinent && selectedContinent !== "All") {
       if (selectedContinent === "North America") {
@@ -63,6 +65,7 @@ export default function CountriesPagination() {
   const start = (page - 1) * pageSize;
   const CountriesSliced = filtered.slice(start, start + pageSize);
 
+  // render component
   return (
     <>
       {isLoading && <LoadSpinner className="mx-auto mt-10" />}

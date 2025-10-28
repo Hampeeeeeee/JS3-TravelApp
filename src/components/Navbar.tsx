@@ -4,12 +4,14 @@ import { ThemeToggle } from "./ThemeToggle";
 import { ContinentDropdown } from "./ContinentDropdown";
 import InputField from "./InputField";
 
+// Navbar component
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDetailRoute, setIsDetailRoute] = useState<boolean>(() =>
     window.location.pathname.startsWith("/country/")
   );
 
+  // Effect to handle scroll and route changes
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -27,6 +29,7 @@ export function Navbar() {
     };
   }, []);
 
+  // Render component
   return (
     <nav
       className={cn(

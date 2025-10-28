@@ -33,7 +33,7 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
 
   const cancelRef = useRef(false);
 
-  // shared load function so we can retry parts if needed
+  // shared load function so refetching is possible if needed
   async function loadAll(cancelFlagRef: { current: boolean }) {
     setLoading(true);
     setError(null);
@@ -44,6 +44,7 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
     setImage([]);
     setImageError(null);
 
+    // --- Fetching country data ---
     try {
       const res = await fetch(
         `https://restcountries.com/v3.1/alpha/${encodeURIComponent(
@@ -55,14 +56,16 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
       const c = Array.isArray(data) ? data[0] : data;
       if (!cancelFlagRef.current) setCountry(c ?? null);
 
-      // fetch wikipedia summary (uses country name)
+      // fetch wikipedia summary (using country name)
       if (!cancelFlagRef.current) {
         const countryTitle = c?.name?.common ?? c?.name?.official ?? c?.cca3;
         if (countryTitle) {
           setWikiLoading(true);
           setWikiError(null);
           try {
-            const slug = encodeURIComponent(String(countryTitle).replace(/\s+/g, "_"));
+            const slug = encodeURIComponent(
+              String(countryTitle).replace(/\s+/g, "_")
+            );
             const wikires = await fetch(
               `https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`
             );
@@ -87,7 +90,7 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
         }
       }
 
-      // --- Fetch weather after country ---
+      // --- Fetch weather after country (using capital coordinates || fallback country coordinates) ---
       const coords = c?.capitalInfo?.latlng ?? c?.latlng;
       if (!cancelFlagRef.current && coords && coords.length === 2) {
         const [lat, lon] = coords;
@@ -116,21 +119,28 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
           setImageError(null);
           try {
             const q = encodeURIComponent(countryQuery);
-            const key = import.meta.env.VITE_TRAVEL_APP_API_KEY ?? import.meta.env.TRAVEL_APP_API_KEY;
+            const key =
+              import.meta.env.VITE_TRAVEL_APP_API_KEY ??
+              import.meta.env.TRAVEL_APP_API_KEY;
             if (!key) throw new Error("Missing Unsplash API key");
 
             // request 3 photos and store their urls
             const imageRes = await fetch(
               `https://api.unsplash.com/search/photos?query=${q}&per_page=3&client_id=${key}`
             );
-            if (!imageRes.ok) throw new Error(`Image API error: ${imageRes.status}`);
+            if (!imageRes.ok)
+              throw new Error(`Image API error: ${imageRes.status}`);
             const imageData = await imageRes.json();
             const urls =
               (imageData?.results ?? [])
-                .map((result: { urls: { regular: string; small: string } }) => result?.urls?.regular ?? result?.urls?.small)
+                .map(
+                  (result: { urls: { regular: string; small: string } }) =>
+                    result?.urls?.regular ?? result?.urls?.small
+                )
                 .filter(Boolean) || [];
 
-            if (!urls.length) throw new Error("No images found for this country");
+            if (!urls.length)
+              throw new Error("No images found for this country");
             if (!cancelFlagRef.current) setImage(urls);
           } catch (err) {
             if (!cancelFlagRef.current) setImageError((err as Error).message);
@@ -163,6 +173,7 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
     loadAll(cancelRef);
   };
 
+  // retry wikipedia fetch
   const retryWiki = async () => {
     if (!country) return;
     setWiki(null);
@@ -192,6 +203,7 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
     }
   };
 
+  // loadspinner while loading
   if (loading)
     return (
       <p className="p-4 text-center">
@@ -199,6 +211,7 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
       </p>
     );
 
+  // error state  
   if (error)
     return (
       <div className="p-4 text-center">
@@ -211,21 +224,24 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
         </div>
       </div>
     );
-
+  // no country selected
   if (!country)
     return (
       <p className="p-4 text-center text-foreground">No country selected.</p>
     );
 
+  // prepare display values
   const languages = country.languages
     ? Object.values(country.languages).join(", ")
     : "—";
+
   const currency = country.currencies
     ? Object.values(country.currencies)
         .map((c) => `${c.name}${c.symbol ? ` (${c.symbol})` : ""}`)
         .join(", ")
     : "—";
 
+    // weather emoji based on temperature
   const weatherEmoji = (temperature: number) => {
     if (temperature <= 10) return "❄️";
     if (temperature <= 15) return "🌥️";
@@ -233,6 +249,7 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
     return "☀️";
   };
 
+  // render component
   return (
     <div className="mx-auto max-w-[950px] p-4">
       <div className="mb-4 flex items-center justify-between">
@@ -302,13 +319,13 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
               </div>
               <div className="text-left flex-1">
                 <h4 className="font-semibold text-lg text-muted-foreground">
-                  <strong>Region:</strong>{" "} {country.region} · {country.subregion ?? "—"}
+                  <strong>Region:</strong> {country.region} ·{" "}
+                  {country.subregion ?? "—"}
                 </h4>
               </div>
             </div>
           </div>
           <div className="gradient-border p-2 card-hover">
-            
             <div className="flex items-center gap-4">
               <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
                 <Landmark className="h-6 w-6 text-primary" />
@@ -327,7 +344,8 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
               </div>
               <div className="text-left flex-1">
                 <h4 className="font-semibold text-lg text-muted-foreground">
-                  <strong>Population:</strong> {country.population?.toLocaleString() ?? "—"}
+                  <strong>Population:</strong>{" "}
+                  {country.population?.toLocaleString() ?? "—"}
                 </h4>
               </div>
             </div>
@@ -338,9 +356,9 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
                 <Wallpaper className="h-6 w-6 text-primary" />
               </div>
               <div className="text-left flex-1">
-                
                 <h4 className="font-semibold text-lg text-muted-foreground">
-                  <strong>Top level domain:</strong> {country.tld?.join(", ") ?? "—"}
+                  <strong>Top level domain:</strong>{" "}
+                  {country.tld?.join(", ") ?? "—"}
                 </h4>
               </div>
             </div>
