@@ -10,4 +10,5 @@ export type Country = {
   tld?: string[];
   currencies?: Record<string, { name: string; symbol?: string }>;
   languages?: Record<string, string>;
+  independent?: boolean;
 };

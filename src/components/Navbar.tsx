@@ -7,8 +7,10 @@ import InputField from "./InputField";
 // Navbar component
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDetailRoute, setIsDetailRoute] = useState<boolean>(() =>
-    window.location.pathname.startsWith("/country/")
+  const [isDetailRoute, setIsDetailRoute] = useState<boolean>(
+    () =>
+      window.location.pathname.startsWith("/country/") ||
+      window.location.pathname.startsWith("/flagged"),
   );
 
   // Effect to handle scroll and route changes
@@ -18,7 +20,10 @@ export function Navbar() {
     };
 
     const handlePop = () => {
-      setIsDetailRoute(window.location.pathname.startsWith("/country/"));
+      setIsDetailRoute(
+        window.location.pathname.startsWith("/country/") ||
+        window.location.pathname.startsWith("/flagged"),
+      );
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -34,28 +39,38 @@ export function Navbar() {
     <nav
       className={cn(
         "z-50 fixed w-full transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+        isScrolled
+          ? "py-3 bg-background/80 backdrop-blur-md shadow-xs"
+          : "py-5",
       )}
     >
       <div className="container flex items-center justify-between">
-        <a
-          className="text-xl font-bold text-primary flex items-center"
-          href="/"
-        >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground"> Travel </span> App
-          </span>
-        </a>
+        <div className="flex items-center gap-4 flex-1">
+          <a
+            className="text-xl font-bold text-primary flex items-center"
+            href="/"
+          >
+            <span className="relative z-10">
+              <span className="text-glow text-foreground"> Travel </span> App
+            </span>
+          </a>
+          <a
+            className="text-xl font-bold text-primary flex items-center"
+            href="/flagged"
+          >
+            <span className="relative z-10">
+              <span className="text-glow text-foreground"> Flagged</span>!
+            </span>
+          </a>
+        </div>
 
         {!isDetailRoute && (
-          <div className="">
           <div className="w-full max-w-xs px-4">
             <InputField />
           </div>
-        </div>
         )}
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-1 justify-end">
           {!isDetailRoute && <ContinentDropdown />}
           <ThemeToggle />
         </div>
