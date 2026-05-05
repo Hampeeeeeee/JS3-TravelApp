@@ -3,7 +3,7 @@ import LoadSpinner from "./loadspinner";
 import { Button } from "./ui/button";
 import { useUrlParams } from "./hooks/useUrlParams";
 import type { Country } from "./types/Country";
-
+import { useEffect } from "react";
 
 // CountriesPagination component
 export default function CountriesPagination() {
@@ -22,7 +22,7 @@ export default function CountriesPagination() {
     queryKey: ["countries"],
     queryFn: async () => {
       const res = await fetch(
-        "https://restcountries.com/v3.1/all?fields=name,capital,cca3,region,subregion,population,flags"
+        "https://restcountries.com/v3.1/all?fields=name,capital,cca3,region,subregion,population,flags",
       );
       if (!res.ok) {
         throw new Error("Failed to fetch countries");
@@ -37,10 +37,15 @@ export default function CountriesPagination() {
     let regionMatch = true;
     if (selectedContinent && selectedContinent !== "All") {
       if (selectedContinent === "North America") {
-        regionMatch = c.region === "Americas" && c.subregion !== "South America";
+        regionMatch =
+          c.region === "Americas" && c.subregion !== "South America";
       } else if (selectedContinent === "South America") {
-        regionMatch = c.region === "Americas" && c.subregion === "South America";
-      } else if (selectedContinent === "Antarctic" || selectedContinent === "Antarctica") {
+        regionMatch =
+          c.region === "Americas" && c.subregion === "South America";
+      } else if (
+        selectedContinent === "Antarctic" ||
+        selectedContinent === "Antarctica"
+      ) {
         regionMatch = c.region === "Antarctic" || c.region === "Antarctica";
       } else {
         regionMatch = c.region === selectedContinent;
@@ -58,9 +63,11 @@ export default function CountriesPagination() {
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
   // clamp page if it's out of bounds
-  if (page > totalPages) {
-    setParams({ page: totalPages });
-  }
+  useEffect(() => {
+    if (!isLoading && !isError && page > totalPages) {
+      setParams({ page: totalPages });
+    }
+  }, [isLoading, isError, page, totalPages, setParams]);
 
   const start = (page - 1) * pageSize;
   const CountriesSliced = filtered.slice(start, start + pageSize);
@@ -81,7 +88,9 @@ export default function CountriesPagination() {
         </h2>
 
         {total === 0 ? (
-          <p className="text-center mt-6 text-foreground">No countries match your criteria, try again!</p>
+          <p className="text-center mt-6 text-foreground">
+            No countries match your criteria, try again!
+          </p>
         ) : (
           <ul className="divide-y divide-primary">
             {CountriesSliced.map((country) => (
@@ -96,7 +105,8 @@ export default function CountriesPagination() {
                   <div className="font-medium">{country.name.common}</div>
                   <div className="text-xs">{country.capital?.[0] ?? "—"}</div>
                   <div className="text-xs text-foreground">
-                    {country.region ?? "—"} · {country.population?.toLocaleString() ?? "—"}
+                    {country.region ?? "—"} ·{" "}
+                    {country.population?.toLocaleString() ?? "—"}
                   </div>
                 </div>
                 <div className="ml-4 flex-shrink-0">
@@ -133,7 +143,9 @@ export default function CountriesPagination() {
             </span>
             <button
               className="rounded border px-3 py-1 text-sm disabled:opacity-50"
-              onClick={() => setParams({ page: Math.min(totalPages, page + 1) })}
+              onClick={() =>
+                setParams({ page: Math.min(totalPages, page + 1) })
+              }
               disabled={page === totalPages}
               aria-label="Next page"
             >

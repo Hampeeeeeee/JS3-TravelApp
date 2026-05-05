@@ -14,11 +14,13 @@ const InputField = () => {
 
   // Debounce updating URL params
   useEffect(() => {
-    const timer = setTimeout(() => {
+  const timer = setTimeout(() => {
+    if (q !== params.query) {  // only update if query actually changed
       setParams({ query: q });
-    }, 400);
-    return () => clearTimeout(timer);
-  }, [q, setParams]);
+    }
+  }, 400);
+  return () => clearTimeout(timer);
+}, [q, setParams, params.query]);
 
   // render component
   return (
