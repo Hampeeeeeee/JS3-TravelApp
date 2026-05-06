@@ -143,6 +143,11 @@
   text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
 }
 
+@utility border-glow {
+  @apply relative;
+  box-shadow: 0 0 10px rgba(167, 139, 250, 1);
+}
+
 @utility card-hover {
   @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
 }

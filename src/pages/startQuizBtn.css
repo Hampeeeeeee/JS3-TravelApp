@@ -1,0 +1,18 @@
+.startQuizBtn {
+    background: hsl(var(--primary));
+    color: hsl(var(--background));
+    border: none;
+    size: 1.2rem;
+    padding: 10px 20px;
+    margin-left: 20px;
+}
+
+.startQuizBtn:hover {
+    background: hsl(var(--primary));
+    color: hsl(var(--background));
+    border: none;
+    padding: 10px 20px;
+    margin-left: 20px;
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
