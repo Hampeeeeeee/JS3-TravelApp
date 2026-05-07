@@ -2,7 +2,8 @@
     background: hsl(var(--primary));
     color: hsl(var(--background));
     border: none;
-    size: 1.2rem;
+    width: 10rem;
+    height: 4rem;
     padding: 10px 20px;
     margin-left: 20px;
 }

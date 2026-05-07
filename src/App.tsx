@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import CountriesPagination from "./components/countries-pagination";
 import { Navbar } from "./components/Navbar";
 import CountryDetail from "./components/CountryDetail";
-import Flagged from "./pages/flagged";
+import Flagged from "./pages/Flagged";
 
 // App component
 function App() {
