@@ -11,6 +11,11 @@ export function QuizTimer(initialSeconds: number) {
     return `${m}:${s}`;
   };
 
+  const resetTimer = () => {
+    setTimeLeft(initialSeconds);
+    setIsRunning(false);
+  }
+
   useEffect(() => {
     if (!isRunning) return;
 
@@ -26,5 +31,5 @@ export function QuizTimer(initialSeconds: number) {
     return () => clearInterval(interval);
   }, [isRunning, timeLeft]);
 
-  return { timeLeft, isRunning, setIsRunning, formatTime };
+  return { timeLeft, isRunning, setIsRunning, formatTime, resetTimer };
 }
