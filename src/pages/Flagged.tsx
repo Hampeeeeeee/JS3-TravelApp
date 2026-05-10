@@ -9,11 +9,16 @@ import { Button } from "@/components/ui/button";
 // Fetching of flags
 export default function Flagged() {
   const { timeLeft, setIsRunning, formatTime, resetTimer } = QuizTimer(20 * 60);
-  const [ quizStarted, setQuizStarted ] = useState(false);
-  const [ gameOver, setGameOver ] = useState(false);
-  const [ shuffleCountries, setShuffleCountries ] = useState(0);
-  const [ showFlag, setShowFlag ] = useState(false);
-  const [ currentFlagIndex, setCurrentFlagIndex ] = useState(0);
+  const [quizStarted, setQuizStarted] = useState(false);
+  const [gameOver, setGameOver] = useState(false);
+  const [shuffleCountries, setShuffleCountries] = useState(0);
+  const [showFlag, setShowFlag] = useState(false);
+  const [currentFlagIndex, setCurrentFlagIndex] = useState(0);
+  const [guessedFlags, setGuessedFlags] = useState<string[]>([]);
+  const [score, setScore] = useState(0);
+  const [inputValue, setInputValue] = useState("");
+  const [result, setResult] = useState<"correct" | "incorrect" | null>(null);
+
   const {
     data: countries = [],
     isLoading,
@@ -33,14 +38,33 @@ export default function Flagged() {
     },
   });
 
-  // Variable to hold independent countries and randomize their positions
   const independentCountries = useMemo(() => {
-    void shuffleCountries; // Dependency to trigger re-shuffling
+    void shuffleCountries;
     return countries
       .filter((c) => c.independent === true)
       .sort(() => Math.random() - 0.5);
   }, [countries, shuffleCountries]);
 
+  const remainingFlags = useMemo(() => {
+    return independentCountries.filter(
+      (c) => !guessedFlags.includes(c.name.common),
+    );
+  }, [independentCountries, guessedFlags]);
+
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setInputValue(value);
+
+    const correctFlag = remainingFlags[currentFlagIndex]?.name?.common;
+    if (value.toLowerCase() === correctFlag?.toLowerCase()) {
+      setGuessedFlags((prev) => [...prev, correctFlag]);
+      setScore((prev) => prev + 1);
+      setResult("correct");
+      setInputValue("");
+      setTimeout(() => setResult(null), 500);
+    }
+  };
+  
   // Rendered component
   return (
     <section className="container mx-auto px-4 py-8">
@@ -61,6 +85,8 @@ export default function Flagged() {
               resetTimer();
               setShuffleCountries((prev) => prev + 1);
               setCurrentFlagIndex(0);
+              setGuessedFlags([]);
+              setScore(0);
               setIsRunning(true);
               setQuizStarted(true);
               setGameOver(false);
@@ -79,35 +105,60 @@ export default function Flagged() {
       )}
       {!isLoading && !isError && (
         <>
-          <div className="flex items-center justify-between space-x-20 mb-12 font-bold text-glow">
-            <div className="flex items-center space-x-14">
-              <form
-                className={`items-center space-x-2 text-2xl ${quizStarted ? "flex" : "invisible"}`}
-              >
-                <label className="mr-2">Enter flag name:</label>
-                <input
-                  type="text"
-                  className="bg-primary border rounded border-blue-400"
-                />
-              </form>
-              {showFlag && (
+          <div className="flex items-center justify-between gap-8 mb-12 font-bold text-glow">
+            <form
+              className={`flex items-center gap-2 text-2xl ${quizStarted ? "flex" : "invisible"}`}
+            >
+              <label className="whitespace-nowrap">Enter flag name:</label>
+              <input
+                type="text"
+                value={inputValue}
+                onChange={handleInput}
+                className="bg-primary border rounded border-blue-400 min-w-0 w-full"
+              />
+            </form>
+
+            {showFlag && (
+              <div className="flex items-center gap-4 shrink-0">
                 <img
                   src={encodeURI(
-                    independentCountries[currentFlagIndex]?.flags?.svg ||
-                      independentCountries[currentFlagIndex]?.flags?.png ||
+                    remainingFlags[currentFlagIndex]?.flags?.svg ||
+                      remainingFlags[currentFlagIndex]?.flags?.png ||
                       "",
                   )}
                   alt="Current flag"
                   className={`w-24 h-16 object-cover rounded border ${quizStarted ? "visible" : "invisible"}`}
                 />
-              )}
-            </div>
-            <div className="flex items-center space-x-20">
+                <div className="flex gap-2">
+                  <Button
+                    onClick={() =>
+                      setCurrentFlagIndex((prev) => Math.max(0, prev - 1))
+                    }
+                    disabled={currentFlagIndex === 0}
+                  >
+                    Previous
+                  </Button>
+                  <Button
+                    onClick={() =>
+                      setCurrentFlagIndex((prev) =>
+                        Math.min(remainingFlags.length - 1, prev + 1),
+                      )
+                    }
+                    disabled={
+                      currentFlagIndex === independentCountries.length - 1
+                    }
+                  >
+                    Next
+                  </Button>
+                </div>
+              </div>
+            )}
+
+            <div className="flex items-center gap-12 shrink-0">
               <div>
                 Score:{" "}
                 <span className="text-3xl block mb-5">
-                  {" "}
-                  0 / {independentCountries.length}
+                  {score} / {independentCountries.length}
                 </span>
               </div>
               <div className="flex flex-col">
@@ -121,6 +172,7 @@ export default function Flagged() {
                     setIsRunning(false);
                     setQuizStarted(false);
                     setGameOver(true);
+                    setShowFlag(false);
                   }}
                 >
                   Give up
@@ -134,7 +186,7 @@ export default function Flagged() {
                 key={country.name.common}
                 className="flex flex-col items-center"
               >
-                <p className="font-bold mb-2 w-full truncate">
+                <p className="font-bold mb-2 w-full truncate hidden">
                   {country.name.common}
                 </p>
                 <img
