@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function QuizTimer(initialSeconds: number) {
+export function QuizTimer(initialSeconds: number, onExpire?: () => void) {
 
   const [timeLeft, setTimeLeft] = useState(initialSeconds);
   const [isRunning, setIsRunning] = useState(false);
@@ -21,6 +21,7 @@ export function QuizTimer(initialSeconds: number) {
 
     if (timeLeft === 0) {
       setIsRunning(false);
+      onExpire?.();
 
       return;
     }

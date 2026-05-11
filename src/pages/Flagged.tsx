@@ -8,7 +8,14 @@ import { Button } from "@/components/ui/button";
 
 // Fetching of flags
 export default function Flagged() {
-  const { timeLeft, setIsRunning, formatTime, resetTimer } = QuizTimer(20 * 60);
+  const { timeLeft, setIsRunning, formatTime, resetTimer } = QuizTimer(
+    20 * 60,
+    () => {
+      setGameOver(true);
+      setShowFlag(false);
+      setQuizStarted(false);
+    },
+  );
   const [quizStarted, setQuizStarted] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [shuffleCountries, setShuffleCountries] = useState(0);
@@ -62,9 +69,16 @@ export default function Flagged() {
       setResult("correct");
       setInputValue("");
       setTimeout(() => setResult(null), 500);
+
+      if (score + 1 === independentCountries.length) {
+        setGameOver(true);
+        setShowFlag(false);
+        setQuizStarted(false);
+        setIsRunning(false);
+      }
     }
   };
-  
+
   // Rendered component
   return (
     <section className="container mx-auto px-4 py-8">
@@ -180,21 +194,40 @@ export default function Flagged() {
               </div>
             </div>
           </div>
+          {gameOver && (
+            <div className="flex flex-col items-center justify-center gap-4 mb-20 text-glow">
+              <h2 className="text-4xl font-bold">Game Over!</h2>
+              <p className="text-2xl">
+                You got <span className="text-3xl font-bold">{score}</span> out
+                of{" "}
+                <span className="text-3xl font-bold">
+                  {independentCountries.length}
+                </span>{" "}
+                flags correct!
+              </p>
+            </div>
+          )}
           <div className="grid grid-cols-4 gap-4">
             {independentCountries.map((country) => (
               <div
                 key={country.name.common}
                 className="flex flex-col items-center"
               >
-                <p className="font-bold mb-2 w-full truncate hidden">
-                  {country.name.common}
+                <p
+                  className={`font-bold w-full truncate h-6 ${guessedFlags.includes(country.name.common) ? "text-primary" : "text-red-400"}`}
+                >
+                  {gameOver
+                    ? country.name.common
+                    : guessedFlags.includes(country.name.common)
+                      ? country.name.common
+                      : ""}
                 </p>
                 <img
                   src={encodeURI(
                     country.flags?.svg || country.flags?.png || "",
                   )}
                   alt={country.name.common}
-                  className="w-full h-38 object-cover rounded border border-blue-400"
+                  className={`w-full h-38 object-cover rounded border ${gameOver ? (guessedFlags.includes(country.name.common) ? "border-green-400 border-4" : "border-red-400 border-4") : "border-blue-400"}`}
                   loading="lazy"
                 />
               </div>
