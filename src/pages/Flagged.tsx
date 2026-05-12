@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import "/src/components/startQuizBtn.css";
 import { QuizTimer } from "@/components/hooks/quizTimer";
 import { Button } from "@/components/ui/button";
+import CountryCard from "@/components/CountryCard";
 
 // Fetching of flags
 export default function Flagged() {
@@ -25,6 +26,7 @@ export default function Flagged() {
   const [score, setScore] = useState(0);
   const [inputValue, setInputValue] = useState("");
   const [result, setResult] = useState<"correct" | "incorrect" | null>(null);
+  const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
 
   const {
     data: countries = [],
@@ -35,7 +37,7 @@ export default function Flagged() {
     queryKey: ["countries"],
     queryFn: async () => {
       const res = await fetch(
-        "https://restcountries.com/v3.1/all?fields=name,flags,independent",
+        "https://restcountries.com/v3.1/all?fields=name,flags,independent,cca3",
       );
       if (!res.ok) {
         throw new Error("Failed to fetch countries");
@@ -105,6 +107,7 @@ export default function Flagged() {
               setQuizStarted(true);
               setGameOver(false);
               setShowFlag(true);
+              setInputValue("");
             }}
           >
             {gameOver ? "Play again" : "Start Quiz"}
@@ -205,6 +208,9 @@ export default function Flagged() {
                 </span>{" "}
                 flags correct!
               </p>
+              <p>
+                Click on any flag to see more details about the country, or play again!
+              </p>
             </div>
           )}
           <div className="grid grid-cols-4 gap-4">
@@ -226,14 +232,21 @@ export default function Flagged() {
                   src={encodeURI(
                     country.flags?.svg || country.flags?.png || "",
                   )}
+                  onClick={() => gameOver && setSelectedCountry(country)}
                   alt={country.name.common}
-                  className={`w-full h-38 object-cover rounded border ${gameOver ? (guessedFlags.includes(country.name.common) ? "border-green-400 border-4" : "border-red-400 border-4") : "border-blue-400"}`}
+                  className={`w-full h-38 object-cover rounded border ${gameOver ? (guessedFlags.includes(country.name.common) ? "border-green-400 border-4 cursor-pointer" : "border-red-400 border-4 cursor-pointer") : "border-blue-400"}`}
                   loading="lazy"
                 />
               </div>
             ))}
           </div>
         </>
+      )}
+      {selectedCountry && (
+        <CountryCard
+          country={selectedCountry}
+          onClose={() => setSelectedCountry(null)}
+        />
       )}
     </section>
   );

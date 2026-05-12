@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import type { WikiSummary } from "./types/WikiSummary";
 
-export default function CountryDetail({ cca3 }: { cca3: string }) {
+export default function CountryDetail({ cca3, hideBackBtn }: { cca3: string; hideBackBtn?: boolean }) {
   const [country, setCountry] = useState<Country | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -250,6 +250,7 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
     <main className="mx-auto max-w-[950px] p-4">
       <header className="mb-4 flex items-center justify-between">
         <h1 className="text-2xl font-semibold">{country.name.common}</h1>
+        {!hideBackBtn && (
         <Button
           className="bg-primary/50 hover:scale-[1.05] cursor-pointer text-foreground"
           onClick={() => {
@@ -263,6 +264,7 @@ export default function CountryDetail({ cca3 }: { cca3: string }) {
         >
           Back
         </Button>
+        )}
       </header>
 
       <article className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
