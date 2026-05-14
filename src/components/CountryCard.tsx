@@ -23,7 +23,7 @@ export default function CountryCard({ country, onClose }: CountryCardProps) {
         >
           ✕
         </button>
-        <CountryDetail cca3={country.cca3} hideBackBtn />
+        <CountryDetail cca3={country.cca3} hideBackBtn showMnemonic hideWiki />
       </div>
     </div>
   );

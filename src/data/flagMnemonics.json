@@ -1,0 +1,1582 @@
+[
+    {
+    "cca3": "ALB",
+    "pattern": "symbol_center",
+    "meaning": "The black double-headed eagle represents sovereignty and strength.",
+    "mnemonic": "Black eagle on red background",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "AND",
+    "pattern": "vertical_tricolor_symbol",
+    "meaning": "Colors reflect shared history with France and Spain, with a central coat of arms.",
+    "mnemonic": "France colors + coat of arms",
+    "confused_with": ["ROU", "MDA"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "AUT",
+    "pattern": "horizontal_stripes",
+    "meaning": "One of the oldest flags, symbolizing a historic banner.",
+    "mnemonic": "Red-white-red sandwich",
+    "confused_with": ["LVA"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "BEL",
+    "pattern": "vertical_tricolor",
+    "meaning": "Represents strength, courage, and determination.",
+    "mnemonic": "Germany but vertical",
+    "confused_with": ["DEU"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "BGR",
+    "pattern": "horizontal_tricolor",
+    "meaning": "White for peace, green for land, red for courage.",
+    "mnemonic": "Russia but green instead of blue",
+    "confused_with": ["RUS", "HUN"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "HRV",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Pan-Slavic colors with a distinctive checkerboard crest.",
+    "mnemonic": "Slavic stripes + checkerboard",
+    "confused_with": ["SRB", "SVN"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "CZE",
+    "pattern": "triangle_bicolor",
+    "meaning": "Represents Bohemia and Slovakia unity.",
+    "mnemonic": "Poland + blue triangle",
+    "confused_with": ["SVK"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "DNK",
+    "pattern": "nordic_cross",
+    "meaning": "Christian cross and one of the oldest national flags.",
+    "mnemonic": "Red with white cross",
+    "confused_with": ["NOR"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "EST",
+    "pattern": "horizontal_tricolor",
+    "meaning": "Blue sky, black land, white future.",
+    "mnemonic": "Blue-black-white dark stripes",
+    "confused_with": ["LVA", "LTU"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "FIN",
+    "pattern": "nordic_cross",
+    "meaning": "Blue lakes over white snow.",
+    "mnemonic": "White snow + blue cross",
+    "confused_with": ["SWE"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "GRC",
+    "pattern": "stripes_cross",
+    "meaning": "Represents sea, sky, and Orthodox Christianity.",
+    "mnemonic": "Stripes + corner cross",
+    "confused_with": ["URY"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "HUN",
+    "pattern": "horizontal_tricolor",
+    "meaning": "Red for strength, white for faith, green for hope.",
+    "mnemonic": "Italy but horizontal",
+    "confused_with": ["BGR"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "ISL",
+    "pattern": "nordic_cross",
+    "meaning": "Fire and ice represented in colors.",
+    "mnemonic": "Norway but inverted colors",
+    "confused_with": ["NOR"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "LVA",
+    "pattern": "horizontal_stripes",
+    "meaning": "Historic Latvian banner.",
+    "mnemonic": "Austria but darker red + thin white",
+    "confused_with": ["AUT"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "LTU",
+    "pattern": "horizontal_tricolor",
+    "meaning": "Sun, land, and blood.",
+    "mnemonic": "Traffic light (yellow-green-red)",
+    "confused_with": ["BOL"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "MDA",
+    "pattern": "vertical_tricolor_symbol",
+    "meaning": "Shared heritage with Romania, with national coat of arms.",
+    "mnemonic": "Romania + eagle crest",
+    "confused_with": ["ROU", "AND"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "MNE",
+    "pattern": "border_symbol",
+    "meaning": "Royal heritage and national emblem.",
+    "mnemonic": "Red with gold border + eagle",
+    "confused_with": ["ALB"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "MKD",
+    "pattern": "sun_rays",
+    "meaning": "Represents the sun of liberty.",
+    "mnemonic": "Sun exploding from center",
+    "confused_with": ["JPN"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "NOR",
+    "pattern": "nordic_cross",
+    "meaning": "Represents freedom and independence.",
+    "mnemonic": "Denmark + blue inside cross",
+    "confused_with": ["ISL", "SWE"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "POL",
+    "pattern": "horizontal_bicolor",
+    "meaning": "White for peace, red for courage.",
+    "mnemonic": "White top, red bottom",
+    "confused_with": ["IDN"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "PRT",
+    "pattern": "vertical_bicolor_symbol",
+    "meaning": "Represents revolution and maritime history.",
+    "mnemonic": "Green-red split with crest",
+    "confused_with": ["ITA"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "ROU",
+    "pattern": "vertical_tricolor",
+    "meaning": "Represents liberty and unity.",
+    "mnemonic": "France + yellow middle",
+    "confused_with": ["TCD", "MDA"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "SRB",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Pan-Slavic unity with royal crest.",
+    "mnemonic": "Russia stripes + crest",
+    "confused_with": ["RUS", "SVK"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "SVK",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Slavic identity and national shield.",
+    "mnemonic": "Russia + shield",
+    "confused_with": ["SVN", "SRB"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "SVN",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Represents mountains, sea, and identity.",
+    "mnemonic": "Slovakia but smaller crest",
+    "confused_with": ["SVK", "SRB"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "ESP",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Historic kingdoms of Spain.",
+    "mnemonic": "Big yellow stripe + crest",
+    "confused_with": [],
+    "difficulty": 1
+  },
+  {
+    "cca3": "CHE",
+    "pattern": "center_cross",
+    "meaning": "Symbol of neutrality and peace.",
+    "mnemonic": "Red square with white plus",
+    "confused_with": ["DNK"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "UKR",
+    "pattern": "horizontal_stripes",
+    "meaning": "Blue sky over yellow wheat fields.",
+    "mnemonic": "Blue over yellow",
+    "confused_with": [],
+    "difficulty": 1
+  },
+  {
+    "cca3": "ARE",
+    "pattern": "horizontal_tricolor_side",
+    "meaning": "Represents Arab unity.",
+    "mnemonic": "3 stripes + vertical red bar",
+    "confused_with": ["KWT"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "JOR",
+    "pattern": "triangle_tricolor",
+    "meaning": "Represents Arab revolt.",
+    "mnemonic": "Stripes + red triangle with star",
+    "confused_with": ["PSE"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "QAT",
+    "pattern": "serrated_bicolor",
+    "meaning": "Represents historic conflicts.",
+    "mnemonic": "Zigzag maroon-white",
+    "confused_with": ["BHR"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "BHR",
+    "pattern": "serrated_bicolor",
+    "meaning": "Symbolizes Islamic heritage.",
+    "mnemonic": "Zigzag red-white (fewer spikes)",
+    "confused_with": ["QAT"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "DZA",
+    "pattern": "vertical_bicolor_symbol",
+    "meaning": "Green represents Islam, white peace, with a red crescent and star.",
+    "mnemonic": "Half green, half white + red moon and star",
+    "confused_with": ["PAK"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "AGO",
+    "pattern": "horizontal_bicolor_symbol",
+    "meaning": "Red for struggle, black for Africa, with a gear and machete.",
+    "mnemonic": "Red-black with yellow gear symbol",
+    "confused_with": ["MOZ"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "BEN",
+    "pattern": "vertical_horizontal_combo",
+    "meaning": "Green hope, yellow wealth, red courage.",
+    "mnemonic": "Green block + yellow-red stripes",
+    "confused_with": ["GNB"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "BWA",
+    "pattern": "horizontal_stripes",
+    "meaning": "Blue for water, black and white for harmony.",
+    "mnemonic": "Blue with black-white stripe",
+    "confused_with": ["NAM"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "BFA",
+    "pattern": "horizontal_bicolor_symbol",
+    "meaning": "Red revolution, green land, yellow star.",
+    "mnemonic": "Red-green with yellow star",
+    "confused_with": ["GHA"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "BDI",
+    "pattern": "diagonal_cross",
+    "meaning": "Unity with stars representing groups.",
+    "mnemonic": "White X with red/green and stars",
+    "confused_with": ["RWA"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "CMR",
+    "pattern": "vertical_tricolor_symbol",
+    "meaning": "Unity and independence.",
+    "mnemonic": "Green-red-yellow + star",
+    "confused_with": ["SEN", "MLI"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "CPV",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Ocean and unity with stars.",
+    "mnemonic": "Blue stripes + circle of stars",
+    "confused_with": ["EU"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "CAF",
+    "pattern": "cross_tricolor",
+    "meaning": "Unity of France and Africa.",
+    "mnemonic": "French stripes + red vertical line",
+    "confused_with": [],
+    "difficulty": 4
+  },
+  {
+    "cca3": "TCD",
+    "pattern": "vertical_tricolor",
+    "meaning": "Hope, unity, sacrifice.",
+    "mnemonic": "Romania but darker blue",
+    "confused_with": ["ROU"],
+    "difficulty": 5
+  },
+  {
+    "cca3": "COM",
+    "pattern": "triangle_stripes_symbol",
+    "meaning": "Islam and island unity.",
+    "mnemonic": "Stripes + green triangle with crescent",
+    "confused_with": ["MDG"],
+    "difficulty": 4
+  },
+  {
+    "cca3": "COG",
+    "pattern": "diagonal_tricolor",
+    "meaning": "Hope, wealth, sacrifice.",
+    "mnemonic": "Green-yellow-red diagonal",
+    "confused_with": ["COD"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "COD",
+    "pattern": "diagonal_stripe_star",
+    "meaning": "Hope and unity.",
+    "mnemonic": "Blue with red diagonal stripe + star",
+    "confused_with": ["COG"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "CIV",
+    "pattern": "vertical_tricolor",
+    "meaning": "Land, peace, hope.",
+    "mnemonic": "Ireland but flipped",
+    "confused_with": ["IRL"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "EGY",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Arab unity and strength.",
+    "mnemonic": "Red-white-black + eagle",
+    "confused_with": ["IRQ", "SYR"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "ETH",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Pan-African colors with emblem.",
+    "mnemonic": "Green-yellow-red + blue circle",
+    "confused_with": ["GHA"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "GHA",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Freedom and African unity.",
+    "mnemonic": "Red-yellow-green + black star",
+    "confused_with": ["ETH"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "KEN",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Struggle and peace with shield.",
+    "mnemonic": "Black-red-green + shield",
+    "confused_with": ["SSD"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "MAR",
+    "pattern": "symbol_center",
+    "meaning": "Green star represents Islam.",
+    "mnemonic": "Red with green star",
+    "confused_with": ["TUN"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "NGA",
+    "pattern": "vertical_tricolor",
+    "meaning": "Agriculture and peace.",
+    "mnemonic": "Green-white-green",
+    "confused_with": [],
+    "difficulty": 1
+  },
+  {
+    "cca3": "ZAF",
+    "pattern": "multicolor_y",
+    "meaning": "Unity of diverse cultures.",
+    "mnemonic": "Colorful Y shape",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "RWA",
+    "pattern": "diagonal_cross",
+    "meaning": "Unity and hope with stars.",
+    "mnemonic": "White X with blue/red and stars",
+    "confused_with": ["BDI"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "SEN",
+    "pattern": "vertical_tricolor_symbol",
+    "meaning": "Hope, unity, sacrifice.",
+    "mnemonic": "Green-yellow-red + green star",
+    "confused_with": ["CMR", "MLI"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "SOM",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Unity of Somali people.",
+    "mnemonic": "Light blue with white star",
+    "confused_with": [],
+    "difficulty": 1
+  },
+  {
+    "cca3": "SSD",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Struggle for independence.",
+    "mnemonic": "Black-red-green + blue triangle with star",
+    "confused_with": ["KEN"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "SDN",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Islamic heritage and unity.",
+    "mnemonic": "Red-white-black + green triangle with star",
+    "confused_with": ["EGY", "IRQ", "SYR"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "TUN",
+    "pattern": "symbol_center",
+    "meaning": "Red for blood, white for peace, crescent and star for Islam.",
+    "mnemonic": "Red with white circle + crescent/star",
+    "confused_with": ["MAR"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "UGA",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "African unity and wildlife.",
+    "mnemonic": "Black-yellow-red + grey crowned crane",
+    "confused_with": ["SSD"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "ZMB",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Freedom and natural resources.",
+    "mnemonic": "Green-red-black-orange + eagle",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "ZWE",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Unity and heritage.",
+    "mnemonic": "Green-yellow-red-black + yellow star with Zimbabwe bird",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "MDV",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Islamic heritage and island unity.",
+    "mnemonic": "Green-white-red stripes + crescent/star",
+    "confused_with": ["COM"],
+    "difficulty": 4
+  },
+  {
+    "cca3": "MDG",
+    "pattern": "triangle_stripes_symbol",
+    "meaning": "Unity and hope for the future.",
+    "mnemonic": "Stripes + red triangle with white star",
+    "confused_with": ["COM"],
+    "difficulty": 4
+  },
+  {
+    "cca3": "MOZ",
+    "pattern": "horizontal_bicolor_symbol",
+    "meaning": "Struggle for independence and natural resources.",
+    "mnemonic": "Green-black with yellow star symbol",
+    "confused_with": ["AGO"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "GNB",
+    "pattern": "vertical_horizontal_combo",
+    "meaning": "Green hope, yellow wealth, red courage.",
+    "mnemonic": "Green block + yellow-red stripes",
+    "confused_with": ["BEN"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "NER",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Hope and sacrifice with sun symbol.",
+    "mnemonic": "Orange-white-green + yellow sun",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "MLI",
+    "pattern": "vertical_tricolor_symbol",
+    "meaning": "Hope, unity, sacrifice.",
+    "mnemonic": "Green-yellow-red + black star",
+    "confused_with": ["CMR", "SEN"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "GMB",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Unity and hope for the future.",
+    "mnemonic": "Red-blue-green stripes + white star",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "AFG",
+    "pattern": "vertical_tricolor_symbol",
+    "meaning": "Black for past, red for struggle, green for hope, with national emblem.",
+    "mnemonic": "Dark tricolor with detailed crest",
+    "confused_with": ["DEU"],
+    "difficulty": 4
+  },
+  {
+    "cca3": "ARM",
+    "pattern": "horizontal_tricolor",
+    "meaning": "Red for struggle, blue for peace, orange for land.",
+    "mnemonic": "Red-blue-orange stripes",
+    "confused_with": ["COL"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "AZE",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Turkic identity and Islam.",
+    "mnemonic": "Blue-red-green + white crescent and star",
+    "confused_with": ["UZB"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "BGD",
+    "pattern": "symbol_offset",
+    "meaning": "Red sun over green land.",
+    "mnemonic": "Green with red circle (off-center)",
+    "confused_with": ["JPN"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "BTN",
+    "pattern": "diagonal_bicolor_symbol",
+    "meaning": "Dragon represents strength and protection.",
+    "mnemonic": "Yellow-orange diagonal with dragon",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "BRN",
+    "pattern": "diagonal_stripes_symbol",
+    "meaning": "Royal authority and Islam.",
+    "mnemonic": "Yellow with diagonal stripes + crest",
+    "confused_with": ["MYS"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "KHM",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Angkor Wat symbolizes heritage.",
+    "mnemonic": "Blue-red-blue with temple",
+    "confused_with": ["THA"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "CHN",
+    "pattern": "stars_symbol",
+    "meaning": "Large star for leadership, small stars for people.",
+    "mnemonic": "Big star + four small ones",
+    "confused_with": ["VNM"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "GEO",
+    "pattern": "multiple_crosses",
+    "meaning": "Christian crosses symbolize faith.",
+    "mnemonic": "Big red cross + 4 small crosses",
+    "confused_with": ["ENG"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "IND",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Courage, peace, growth, with Ashoka Chakra.",
+    "mnemonic": "Orange-white-green + blue wheel",
+    "confused_with": ["NER"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "IDN",
+    "pattern": "horizontal_bicolor",
+    "meaning": "Courage and purity.",
+    "mnemonic": "Red over white",
+    "confused_with": ["POL", "MCO"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "IRN",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Islamic republic symbolism.",
+    "mnemonic": "Green-white-red + red emblem",
+    "confused_with": ["HUN"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "IRQ",
+    "pattern": "horizontal_tricolor_text",
+    "meaning": "Arab unity and faith.",
+    "mnemonic": "Red-white-black + Arabic text",
+    "confused_with": ["SYR"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "ISR",
+    "pattern": "symbol_stripes",
+    "meaning": "Star of David and Jewish identity.",
+    "mnemonic": "Blue stripes + star",
+    "confused_with": [],
+    "difficulty": 1
+  },
+  {
+    "cca3": "JPN",
+    "pattern": "symbol_center",
+    "meaning": "Represents the sun.",
+    "mnemonic": "Red circle on white",
+    "confused_with": ["BGD"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "KAZ",
+    "pattern": "symbol_side",
+    "meaning": "Sky and freedom with eagle.",
+    "mnemonic": "Light blue with golden eagle",
+    "confused_with": ["MNG"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "KWT",
+    "pattern": "horizontal_tricolor_side",
+    "meaning": "Arab unity.",
+    "mnemonic": "Green-white-red + black trapezoid",
+    "confused_with": ["ARE"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "LAO",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Unity and full moon over Mekong.",
+    "mnemonic": "Red-blue-red + white circle",
+    "confused_with": ["THA"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "LBN",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Cedar tree represents strength.",
+    "mnemonic": "Red-white-red + green tree",
+    "confused_with": [],
+    "difficulty": 1
+  },
+  {
+    "cca3": "MYS",
+    "pattern": "stripes_canton",
+    "meaning": "Unity and Islam.",
+    "mnemonic": "US-style stripes + crescent",
+    "confused_with": ["USA"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "MNG",
+    "pattern": "vertical_bicolor_symbol",
+    "meaning": "Freedom and independence.",
+    "mnemonic": "Red-blue-red + symbol",
+    "confused_with": ["KAZ"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "NPL",
+    "pattern": "double_pennant",
+    "meaning": "Himalayas and unity.",
+    "mnemonic": "Only non-rectangular flag",
+    "confused_with": [],
+    "difficulty": 1
+  },
+  {
+    "cca3": "PRK",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Revolution and unity.",
+    "mnemonic": "Blue-red-blue + red star",
+    "confused_with": ["KOR"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "KOR",
+    "pattern": "symbol_center_trigrams",
+    "meaning": "Balance and harmony.",
+    "mnemonic": "Yin-yang + black bars",
+    "confused_with": ["JPN"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "SAU",
+    "pattern": "symbol_text",
+    "meaning": "Islamic creed and sword.",
+    "mnemonic": "Green with Arabic text",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "SGP",
+    "pattern": "horizontal_bicolor_symbol",
+    "meaning": "Progress and unity.",
+    "mnemonic": "Red-white + crescent and stars",
+    "confused_with": ["IDN"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "LKA",
+    "pattern": "border_symbol",
+    "meaning": "Lion symbolizes strength.",
+    "mnemonic": "Lion holding sword on red",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "SYR",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Arab unity.",
+    "mnemonic": "Red-white-black + two green stars",
+    "confused_with": ["IRQ"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "THA",
+    "pattern": "horizontal_stripes",
+    "meaning": "Nation, religion, king.",
+    "mnemonic": "Red-white-blue-white-red",
+    "confused_with": ["CRI"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "TUR",
+    "pattern": "crescent_star",
+    "meaning": "Islamic symbolism.",
+    "mnemonic": "Red with white moon and star",
+    "confused_with": ["TUN"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "VNM",
+    "pattern": "symbol_center",
+    "meaning": "Unity under communism.",
+    "mnemonic": "Red with yellow star",
+    "confused_with": ["CHN"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "YEM",
+    "pattern": "horizontal_tricolor",
+    "meaning": "Unity and struggle.",
+    "mnemonic": "Red-white-black horizontal stripes",
+    "confused_with": ["EGY", "IRQ", "SYR"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "PSE",
+    "pattern": "triangle_tricolor",
+    "meaning": "Palestinian identity and struggle.",
+    "mnemonic": "Stripes + red triangle with star",
+    "confused_with": ["JOR"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "ARG",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Sky and clouds with the Sun of May.",
+    "mnemonic": "Light blue-white-light blue + sun",
+    "confused_with": ["URY"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "BOL",
+    "pattern": "horizontal_tricolor",
+    "meaning": "Red for bravery, yellow for resources, green for land.",
+    "mnemonic": "Red-yellow-green stripes",
+    "confused_with": ["LTU"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "BRA",
+    "pattern": "diamond_symbol",
+    "meaning": "Green land, yellow wealth, blue sky with stars.",
+    "mnemonic": "Green + yellow diamond + blue globe",
+    "confused_with": [],
+    "difficulty": 1
+  },
+  {
+    "cca3": "CAN",
+    "pattern": "vertical_tricolor_symbol",
+    "meaning": "Peace and nature with maple leaf.",
+    "mnemonic": "Red-white-red + maple leaf",
+    "confused_with": [],
+    "difficulty": 1
+  },
+  {
+    "cca3": "CHL",
+    "pattern": "canton_star",
+    "meaning": "Sky and independence.",
+    "mnemonic": "US-like corner star + stripes",
+    "confused_with": ["USA", "CUB"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "COL",
+    "pattern": "horizontal_tricolor",
+    "meaning": "Wealth, sea, and blood.",
+    "mnemonic": "Big yellow stripe on top",
+    "confused_with": ["ECU", "VEN"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "CUB",
+    "pattern": "triangle_stripes_star",
+    "meaning": "Independence and freedom.",
+    "mnemonic": "Stripes + red triangle with star",
+    "confused_with": ["PRI"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "DOM",
+    "pattern": "cross_center_symbol",
+    "meaning": "Faith and unity.",
+    "mnemonic": "White cross splitting flag + crest",
+    "confused_with": ["HTI"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "ECU",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Shared heritage with Gran Colombia.",
+    "mnemonic": "Colombia + crest",
+    "confused_with": ["COL"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "GTM",
+    "pattern": "vertical_tricolor_symbol",
+    "meaning": "Liberty and justice.",
+    "mnemonic": "Blue-white-blue + emblem",
+    "confused_with": ["HND"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "HTI",
+    "pattern": "horizontal_bicolor_symbol",
+    "meaning": "Unity and freedom.",
+    "mnemonic": "Blue-red + small crest",
+    "confused_with": ["DOM"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "HND",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Unity of Central America.",
+    "mnemonic": "Blue-white-blue + 5 stars",
+    "confused_with": ["SLV", "NIC"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "JAM",
+    "pattern": "diagonal_cross",
+    "meaning": "Sun, land, and strength.",
+    "mnemonic": "Yellow X with green and black",
+    "confused_with": [],
+    "difficulty": 1
+  },
+  {
+    "cca3": "MEX",
+    "pattern": "vertical_tricolor_symbol",
+    "meaning": "Independence and heritage.",
+    "mnemonic": "Italy + eagle eating snake",
+    "confused_with": ["ITA"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "USA",
+    "pattern": "stars_stripes",
+    "meaning": "States and unity.",
+    "mnemonic": "Stars + stripes",
+    "confused_with": ["MYS"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "URY",
+    "pattern": "stripes_canton_symbol",
+    "meaning": "Freedom and independence.",
+    "mnemonic": "Argentina + stripes and sun in corner",
+    "confused_with": ["ARG"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "VEN",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Liberty and unity.",
+    "mnemonic": "Colombia + arc of stars",
+    "confused_with": ["COL"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "AUS",
+    "pattern": "canton_stars",
+    "meaning": "British heritage and southern stars.",
+    "mnemonic": "UK corner + stars",
+    "confused_with": ["NZL"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "FJI",
+    "pattern": "canton_symbol",
+    "meaning": "Colonial heritage and national shield.",
+    "mnemonic": "Light blue + UK corner + shield",
+    "confused_with": ["TUV"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "NZL",
+    "pattern": "canton_stars",
+    "meaning": "Southern Cross constellation.",
+    "mnemonic": "Like Australia but fewer stars (red)",
+    "confused_with": ["AUS"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "PNG",
+    "pattern": "diagonal_bicolor_symbol",
+    "meaning": "Bird of paradise and stars.",
+    "mnemonic": "Black-red diagonal + bird",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "WSM",
+    "pattern": "canton_stars",
+    "meaning": "Southern Cross and independence.",
+    "mnemonic": "Red with blue corner + stars",
+    "confused_with": ["TUV"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "TUV",
+    "pattern": "canton_stars",
+    "meaning": "British heritage and island unity.",
+    "mnemonic": "Light blue + UK corner + stars",
+    "confused_with": ["FJI"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "SLV",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Unity of Central America.",
+    "mnemonic": "Blue-white-blue + coat of arms",
+    "confused_with": ["HND", "NIC"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "NIC",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Unity of Central America.",
+    "mnemonic": "Blue-white-blue + coat of arms",
+    "confused_with": ["HND", "SLV"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "GBR",
+    "pattern": "combined_crosses",
+    "meaning": "Union of England, Scotland, and Ireland.",
+    "mnemonic": "Red and white crosses overlapping on blue",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "FRA",
+    "pattern": "vertical_tricolor",
+    "meaning": "Liberty, equality, fraternity.",
+    "mnemonic": "Blue-white-red vertical",
+    "confused_with": ["ITA", "NLD"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "DEU",
+    "pattern": "horizontal_tricolor",
+    "meaning": "Unity and freedom.",
+    "mnemonic": "Black-red-yellow stripes",
+    "confused_with": ["BEL"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "ITA",
+    "pattern": "vertical_tricolor",
+    "meaning": "Hope, faith, charity.",
+    "mnemonic": "Green-white-red vertical",
+    "confused_with": ["MEX"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "SWE",
+    "pattern": "nordic_cross",
+    "meaning": "Christian heritage.",
+    "mnemonic": "Blue with yellow cross",
+    "confused_with": ["FIN"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "NLD",
+    "pattern": "horizontal_tricolor",
+    "meaning": "Historic Dutch independence.",
+    "mnemonic": "Red-white-blue stripes",
+    "confused_with": ["LUX"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "IRL",
+    "pattern": "vertical_tricolor",
+    "meaning": "Peace between traditions.",
+    "mnemonic": "Green-white-orange vertical",
+    "confused_with": ["CIV"],
+    "difficulty": 1
+  },
+  {
+    "cca3": "LUX",
+    "pattern": "horizontal_tricolor",
+    "meaning": "Freedom and independence.",
+    "mnemonic": "Netherlands but lighter blue",
+    "confused_with": ["NLD"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "MLT",
+    "pattern": "vertical_bicolor_symbol",
+    "meaning": "George Cross for bravery.",
+    "mnemonic": "White-red with tiny cross in corner",
+    "confused_with": ["POL"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "LIE",
+    "pattern": "horizontal_bicolor_symbol",
+    "meaning": "Prince’s crown symbolizes unity.",
+    "mnemonic": "Blue-red with crown",
+    "confused_with": ["HTI"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "SMR",
+    "pattern": "horizontal_bicolor_symbol",
+    "meaning": "Liberty and independence.",
+    "mnemonic": "White-blue with coat of arms",
+    "confused_with": ["ARG"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "VAT",
+    "pattern": "vertical_bicolor_symbol",
+    "meaning": "Papal authority.",
+    "mnemonic": "Yellow-white with keys symbol",
+    "confused_with": [],
+    "difficulty": 2
+  },
+
+  {
+    "cca3": "DJI",
+    "pattern": "triangle_bicolor_symbol",
+    "meaning": "Unity and peace.",
+    "mnemonic": "Blue-green with white triangle + star",
+    "confused_with": ["SOM"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "ERI",
+    "pattern": "triangle_stripes_symbol",
+    "meaning": "Struggle for independence.",
+    "mnemonic": "Red triangle with green/blue + wreath",
+    "confused_with": ["DJI"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "GAB",
+    "pattern": "horizontal_tricolor",
+    "meaning": "Sun, sea, forest.",
+    "mnemonic": "Green-yellow-blue stripes",
+    "confused_with": ["RWA"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "GIN",
+    "pattern": "vertical_tricolor",
+    "meaning": "Unity and work.",
+    "mnemonic": "Red-yellow-green vertical",
+    "confused_with": ["MLI", "SEN"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "GNQ",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Peace, unity, justice.",
+    "mnemonic": "Green-white-red + blue triangle + crest",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "LSO",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Peace and rain.",
+    "mnemonic": "Blue-white-green + black hat",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "LBR",
+    "pattern": "stripes_canton",
+    "meaning": "Inspired by USA.",
+    "mnemonic": "US style but one star",
+    "confused_with": ["USA"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "LBY",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Freedom and Islam.",
+    "mnemonic": "Red-black-green + crescent/star",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "MWI",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Dawn of freedom.",
+    "mnemonic": "Black-red-green + rising sun",
+    "confused_with": ["KEN"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "MRT",
+    "pattern": "symbol_center",
+    "meaning": "Islamic identity.",
+    "mnemonic": "Green with crescent and star",
+    "confused_with": ["PAK"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "MUS",
+    "pattern": "horizontal_stripes",
+    "meaning": "Independence and harmony.",
+    "mnemonic": "Red-blue-yellow-green stripes",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "NAM",
+    "pattern": "diagonal_stripe",
+    "meaning": "Sun and life.",
+    "mnemonic": "Blue-red-green diagonal + sun",
+    "confused_with": ["BWA"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "SLE",
+    "pattern": "horizontal_tricolor",
+    "meaning": "Unity and justice.",
+    "mnemonic": "Green-white-blue stripes",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "SWZ",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Protection and culture.",
+    "mnemonic": "Red-blue-yellow + shield",
+    "confused_with": ["KEN"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "TZA",
+    "pattern": "diagonal_tricolor",
+    "meaning": "Land, minerals, water.",
+    "mnemonic": "Green-black-blue diagonal",
+    "confused_with": ["NAM"],
+    "difficulty": 2
+  },
+
+  {
+    "cca3": "UZB",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Sky, peace, nature.",
+    "mnemonic": "Blue-white-green + crescent and stars",
+    "confused_with": ["AZE"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "TKM",
+    "pattern": "vertical_stripe_symbol",
+    "meaning": "Cultural heritage.",
+    "mnemonic": "Green with red carpet stripe",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "KGZ",
+    "pattern": "symbol_center",
+    "meaning": "Sun and unity.",
+    "mnemonic": "Red with yellow sun lines",
+    "confused_with": ["MKD"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "TJK",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Unity and sovereignty.",
+    "mnemonic": "Red-white-green + crown",
+    "confused_with": ["IRN"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "OMN",
+    "pattern": "vertical_tricolor_symbol",
+    "meaning": "History and strength.",
+    "mnemonic": "White-red-green + emblem in corner",
+    "confused_with": ["ARE"],
+    "difficulty": 3
+  },
+
+  {
+    "cca3": "ATG",
+    "pattern": "sun_stripes",
+    "meaning": "Sunrise of a new era.",
+    "mnemonic": "Black top + rising sun + blue waves",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "BHS",
+    "pattern": "triangle_stripes",
+    "meaning": "Sea and beaches.",
+    "mnemonic": "Black triangle + aqua and yellow",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "BRB",
+    "pattern": "vertical_tricolor_symbol",
+    "meaning": "Broken trident for independence.",
+    "mnemonic": "Blue-yellow-blue + black trident",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "BLZ",
+    "pattern": "symbol_center",
+    "meaning": "National unity.",
+    "mnemonic": "Blue with red edges + big white circle crest",
+    "confused_with": [],
+    "difficulty": 4
+  },
+  {
+    "cca3": "DMA",
+    "pattern": "cross_symbol",
+    "meaning": "Nature and culture.",
+    "mnemonic": "Green with cross + parrot",
+    "confused_with": [],
+    "difficulty": 4
+  },
+  {
+    "cca3": "GRD",
+    "pattern": "border_symbol",
+    "meaning": "Unity and agriculture.",
+    "mnemonic": "Red border + green/yellow + nutmeg",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "KNA",
+    "pattern": "diagonal_stripe",
+    "meaning": "Hope and unity.",
+    "mnemonic": "Green-red diagonal with stars",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "LCA",
+    "pattern": "triangle_symbol",
+    "meaning": "Island identity.",
+    "mnemonic": "Blue with yellow/black triangle",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "VCT",
+    "pattern": "vertical_tricolor_symbol",
+    "meaning": "Island unity.",
+    "mnemonic": "Blue-yellow-green + diamonds",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "TTO",
+    "pattern": "diagonal_stripe",
+    "meaning": "Strength and unity.",
+    "mnemonic": "Red with black diagonal stripe",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "SUR",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Unity and progress.",
+    "mnemonic": "Green-white-red + yellow star",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "GUY",
+    "pattern": "triangle_stripes",
+    "meaning": "Nature and resources.",
+    "mnemonic": "Green with red triangle arrow",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "PAN",
+    "pattern": "quartered",
+    "meaning": "Peace and political parties.",
+    "mnemonic": "4 squares red/blue stars",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "CRI",
+    "pattern": "horizontal_stripes",
+    "meaning": "Peace and freedom.",
+    "mnemonic": "Like Thailand but thicker red stripe",
+    "confused_with": ["THA"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "PER",
+    "pattern": "vertical_tricolor",
+    "meaning": "Independence and purity.",
+    "mnemonic": "Red-white-red vertical",
+    "confused_with": ["AUT"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "PRY",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Liberty and independence.",
+    "mnemonic": "Red-white-blue + emblem",
+    "confused_with": [],
+    "difficulty": 3
+  },
+
+  {
+    "cca3": "KIR",
+    "pattern": "horizontal_stripes_symbol",
+    "meaning": "Ocean and sunrise.",
+    "mnemonic": "Red sun over blue waves",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "MHL",
+    "pattern": "diagonal_stripe",
+    "meaning": "Peace and unity.",
+    "mnemonic": "Blue with white/orange diagonal",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "FSM",
+    "pattern": "symbol_center",
+    "meaning": "Unity of states.",
+    "mnemonic": "Light blue with 4 white stars",
+    "confused_with": ["SOM"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "NRU",
+    "pattern": "symbol_offset",
+    "meaning": "Island position and independence.",
+    "mnemonic": "Blue with yellow line + white star",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "PLW",
+    "pattern": "symbol_offset",
+    "meaning": "Moon over ocean.",
+    "mnemonic": "Light blue with yellow circle",
+    "confused_with": ["JPN"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "SLB",
+    "pattern": "diagonal_stripe_symbol",
+    "meaning": "Sun, land, and sea.",
+    "mnemonic": "Blue-green diagonal + yellow stars",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "TON",
+    "pattern": "canton_cross",
+    "meaning": "Christian heritage.",
+    "mnemonic": "Red with white corner cross",
+    "confused_with": ["CHE"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "VUT",
+    "pattern": "triangle_symbol",
+    "meaning": "Tradition and unity.",
+    "mnemonic": "Black triangle + boar tusk",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "BLR",
+    "pattern": "vertical_stripe_symbol",
+    "meaning": "Soviet heritage with traditional ornament pattern.",
+    "mnemonic": "Red-green with white-red pattern on side",
+    "confused_with": ["RUS"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "BIH",
+    "pattern": "triangle_stars",
+    "meaning": "Represents Europe and unity.",
+    "mnemonic": "Blue with yellow triangle and white stars",
+    "confused_with": ["KOS"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "UNK",
+    "pattern": "map_stars",
+    "meaning": "Map of Kosovo with stars representing ethnic groups.",
+    "mnemonic": "Blue with yellow map + arc of white stars",
+    "confused_with": ["BIH"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "CYP",
+    "pattern": "map_symbol",
+    "meaning": "Island map and olive branches for peace.",
+    "mnemonic": "White with orange island and green branches",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "MCO",
+    "pattern": "horizontal_bicolor",
+    "meaning": "Royal colors of Monaco.",
+    "mnemonic": "Red over white (like Poland upside down)",
+    "confused_with": ["IDN", "POL"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "TGO",
+    "pattern": "stripes_canton_star",
+    "meaning": "Freedom and unity.",
+    "mnemonic": "Green-yellow stripes + red square with star",
+    "confused_with": ["GHA"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "STP",
+    "pattern": "triangle_stripes_symbol",
+    "meaning": "Independence and unity.",
+    "mnemonic": "Green-yellow stripes + red triangle + stars",
+    "confused_with": ["TGO"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "SYC",
+    "pattern": "diagonal_rays",
+    "meaning": "Dynamic progress and unity.",
+    "mnemonic": "Fan of blue-yellow-red-white-green rays",
+    "confused_with": [],
+    "difficulty": 2
+  },
+  {
+    "cca3": "RUS",
+    "pattern": "horizontal_tricolor",
+    "meaning": "Pan-Slavic unity.",
+    "mnemonic": "White-blue-red stripes",
+    "confused_with": ["SRB", "SVK", "SVN"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "PAK",
+    "pattern": "vertical_stripe_symbol",
+    "meaning": "Islam and minority rights.",
+    "mnemonic": "Green with white stripe + crescent and star",
+    "confused_with": ["TUR"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "PHL",
+    "pattern": "triangle_bicolor_symbol",
+    "meaning": "Freedom and patriotism.",
+    "mnemonic": "Blue-red with white triangle + sun and stars",
+    "confused_with": ["CUB"],
+    "difficulty": 3
+  },
+  {
+    "cca3": "MMR",
+    "pattern": "horizontal_tricolor_symbol",
+    "meaning": "Solidarity, peace, and courage.",
+    "mnemonic": "Yellow-green-red + white star",
+    "confused_with": ["BOL", "ETH"],
+    "difficulty": 2
+  },
+  {
+    "cca3": "TLS",
+    "pattern": "triangle_symbol",
+    "meaning": "Struggle for independence.",
+    "mnemonic": "Red with black triangle + yellow triangle + star",
+    "confused_with": [],
+    "difficulty": 3
+  },
+  {
+    "cca3": "TWN",
+    "pattern": "canton_symbol",
+    "meaning": "Blue sky with white sun over red field.",
+    "mnemonic": "Red with blue corner + white sun",
+    "confused_with": ["SAM"],
+    "difficulty": 2
+  }
+]

@@ -3,6 +3,8 @@ import { Button } from "./ui/button";
 import type { Country } from "./types/Country";
 import LoadSpinner from "./loadspinner";
 import type { Weather } from "./types/Weather";
+import flagMnemonics from "@/data/flagMnemonics.json";
+import type { FlagMnemonic } from "./types/FlagMnemonic";
 import {
   Earth,
   HandCoins,
@@ -14,7 +16,7 @@ import {
 } from "lucide-react";
 import type { WikiSummary } from "./types/WikiSummary";
 
-export default function CountryDetail({ cca3, hideBackBtn }: { cca3: string; hideBackBtn?: boolean }) {
+export default function CountryDetail({ cca3, hideBackBtn, showMnemonic, hideWiki }: { cca3: string; hideBackBtn?: boolean; showMnemonic?: boolean; hideWiki?: boolean }) {
   const [country, setCountry] = useState<Country | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -32,6 +34,7 @@ export default function CountryDetail({ cca3, hideBackBtn }: { cca3: string; hid
   const [imageError, setImageError] = useState<string | null>(null);
 
   const cancelRef = useRef(false);
+  const mnemonic = (flagMnemonics as FlagMnemonic[]).find((m) => m.cca3 === cca3);
 
   // shared load function so refetching is possible if needed
   async function loadAll(cancelFlagRef: { current: boolean }) {
@@ -344,7 +347,39 @@ export default function CountryDetail({ cca3, hideBackBtn }: { cca3: string; hid
             )}
           </section>
 
+          {/* FLAG GUIDE */}
+          {showMnemonic && mnemonic && (
+            <section className="mt-4 border-t border-primary pt-2">
+              <h3 className="font-semibold text-lg text-primary">How to remember this flag!</h3>
+              <dl className="space-y-2 mt-2 text-sm text-foreground">
+                <div>
+                  <dt className="font-semibold text-muted-foreground">Pattern:</dt>
+                  <dd>{mnemonic.pattern.replace(/_/g, " ")}</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-muted-foreground">Colors mean:</dt>
+                  <dd>{mnemonic.meaning}</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-muted-foreground">Remember it by:</dt>
+                  <dd className="italic">"{mnemonic.mnemonic}"</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-muted-foreground">Difficulty:</dt>
+                  <dd>{"⭐".repeat(mnemonic.difficulty)}</dd>
+                </div>
+                {mnemonic.confused_with.length > 0 && (
+                  <div>
+                    <dt className="font-semibold text-muted-foreground">Often confused with:</dt>
+                    <dd>{mnemonic.confused_with.join(", ")}</dd>
+                  </div>
+                )}
+              </dl>
+            </section>
+          )}
+
           {/* WIKIPEDIA */}
+          {!hideWiki && (
           <section className="mt-4 border-t border-primary pt-2">
             <h3 className="font-semibold text-lg text-primary">About</h3>
             {wikiLoading && <p>Loading article summary...</p>}
@@ -376,6 +411,7 @@ export default function CountryDetail({ cca3, hideBackBtn }: { cca3: string; hid
               </article>
             )}
           </section>
+          )}
         </section>
       </article>
     </main>
