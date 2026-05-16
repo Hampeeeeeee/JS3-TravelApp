@@ -5,4 +5,5 @@ export type FlagMnemonic = {
     mnemonic: string;
     confused_with: string[];
     difficulty: number;
+    flag_url: string;
 }

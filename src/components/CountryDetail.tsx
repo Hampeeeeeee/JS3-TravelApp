@@ -6,17 +6,37 @@ import type { Weather } from "./types/Weather";
 import flagMnemonics from "@/data/flagMnemonics.json";
 import type { FlagMnemonic } from "./types/FlagMnemonic";
 import {
+  AlertTriangle,
+  Brain,
   Earth,
+  Grid2x2,
   HandCoins,
   Landmark,
+  Palette,
   PersonStanding,
   ScrollText,
   Speech,
+  Star,
+  Thermometer,
   Wallpaper,
 } from "lucide-react";
 import type { WikiSummary } from "./types/WikiSummary";
 
-export default function CountryDetail({ cca3, hideBackBtn, showMnemonic, hideWiki }: { cca3: string; hideBackBtn?: boolean; showMnemonic?: boolean; hideWiki?: boolean }) {
+export default function CountryDetail({
+  cca3,
+  hideBackBtn,
+  showMnemonic,
+  hideWiki,
+  weatherInfoCard,
+  extraImage,
+}: {
+  cca3: string;
+  hideBackBtn?: boolean;
+  showMnemonic?: boolean;
+  hideWiki?: boolean;
+  weatherInfoCard?: boolean;
+  extraImage?: boolean;
+}) {
   const [country, setCountry] = useState<Country | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -34,7 +54,9 @@ export default function CountryDetail({ cca3, hideBackBtn, showMnemonic, hideWik
   const [imageError, setImageError] = useState<string | null>(null);
 
   const cancelRef = useRef(false);
-  const mnemonic = (flagMnemonics as FlagMnemonic[]).find((m) => m.cca3 === cca3);
+  const mnemonic = (flagMnemonics as FlagMnemonic[]).find(
+    (m) => m.cca3 === cca3,
+  );
 
   // shared load function so refetching is possible if needed
   async function loadAll(cancelFlagRef: { current: boolean }) {
@@ -51,8 +73,8 @@ export default function CountryDetail({ cca3, hideBackBtn, showMnemonic, hideWik
     try {
       const res = await fetch(
         `https://restcountries.com/v3.1/alpha/${encodeURIComponent(
-          cca3
-        )}?fields=name,capital,cca3,region,subregion,population,flags,tld,currencies,languages,capitalInfo,latlng`
+          cca3,
+        )}?fields=name,capital,cca3,region,subregion,population,flags,tld,currencies,languages,capitalInfo,latlng`,
       );
       if (!res.ok) throw new Error("Country not found");
       const data = await res.json();
@@ -67,10 +89,10 @@ export default function CountryDetail({ cca3, hideBackBtn, showMnemonic, hideWik
           setWikiError(null);
           try {
             const slug = encodeURIComponent(
-              String(countryTitle).replace(/\s+/g, "_")
+              String(countryTitle).replace(/\s+/g, "_"),
             );
             const wikires = await fetch(
-              `https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`
+              `https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`,
             );
             if (!wikires.ok) throw new Error("Wikipedia summary not found");
             const wdata = await wikires.json();
@@ -100,7 +122,7 @@ export default function CountryDetail({ cca3, hideBackBtn, showMnemonic, hideWik
         setWeatherLoading(true);
         try {
           const wres = await fetch(
-            `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min&timezone=auto`
+            `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min&timezone=auto`,
           );
           if (!wres.ok) throw new Error("Weather data not found");
           const wdata = await wres.json();
@@ -129,7 +151,7 @@ export default function CountryDetail({ cca3, hideBackBtn, showMnemonic, hideWik
 
             // request 3 photos and store their urls
             const imageRes = await fetch(
-              `https://api.unsplash.com/search/photos?query=${q}&per_page=3&client_id=${key}`
+              `https://api.unsplash.com/search/photos?query=${q}&per_page=${extraImage ? 4 : 3}&client_id=${key}`,
             );
             if (!imageRes.ok)
               throw new Error(`Image API error: ${imageRes.status}`);
@@ -138,7 +160,7 @@ export default function CountryDetail({ cca3, hideBackBtn, showMnemonic, hideWik
               (imageData?.results ?? [])
                 .map(
                   (result: { urls: { regular: string; small: string } }) =>
-                    result?.urls?.regular ?? result?.urls?.small
+                    result?.urls?.regular ?? result?.urls?.small,
                 )
                 .filter(Boolean) || [];
 
@@ -187,7 +209,7 @@ export default function CountryDetail({ cca3, hideBackBtn, showMnemonic, hideWik
     try {
       const slug = encodeURIComponent(String(title).replace(/\s+/g, "_"));
       const wikires = await fetch(
-        `https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`
+        `https://en.wikipedia.org/api/rest_v1/page/summary/${slug}`,
       );
       if (!wikires.ok) throw new Error("Wikipedia summary not found");
       const wdata = await wikires.json();
@@ -254,19 +276,19 @@ export default function CountryDetail({ cca3, hideBackBtn, showMnemonic, hideWik
       <header className="mb-4 flex items-center justify-between">
         <h1 className="text-2xl font-semibold">{country.name.common}</h1>
         {!hideBackBtn && (
-        <Button
-          className="bg-primary/50 hover:scale-[1.05] cursor-pointer text-foreground"
-          onClick={() => {
-            if (window.history.length > 1) window.history.back();
-            else {
-              window.history.pushState({}, "", "/");
-              window.dispatchEvent(new PopStateEvent("popstate"));
-            }
-          }}
-          aria-label="Go back to previous page"
-        >
-          Back
-        </Button>
+          <Button
+            className="bg-primary/50 hover:scale-[1.05] cursor-pointer text-foreground"
+            onClick={() => {
+              if (window.history.length > 1) window.history.back();
+              else {
+                window.history.pushState({}, "", "/");
+                window.dispatchEvent(new PopStateEvent("popstate"));
+              }
+            }}
+            aria-label="Go back to previous page"
+          >
+            Back
+          </Button>
         )}
       </header>
 
@@ -294,7 +316,7 @@ export default function CountryDetail({ cca3, hideBackBtn, showMnemonic, hideWik
           {image.length > 0 && (
             <section aria-label={`${country.name.common} photos`}>
               <ul className="mt-2 grid grid-cols-1 gap-2 md:col-span-1">
-                {image.slice(0, 3).map((src, i) => (
+                {image.slice(0, extraImage ? 4 : 3).map((src, i) => (
                   <li key={i}>
                     <img
                       src={src}
@@ -320,59 +342,142 @@ export default function CountryDetail({ cca3, hideBackBtn, showMnemonic, hideWik
 
           {/* FACT CARDS */}
           <dl className="space-y-2">
-            <InfoItem icon={ScrollText} label="Official name" value={country.name.official ?? "—"} />
-            <InfoItem icon={Earth} label="Region" value={`${country.region} · ${country.subregion ?? "—"}`} />
-            <InfoItem icon={Landmark} label="Capital" value={country.capital?.[0] ?? "—"} />
-            <InfoItem icon={PersonStanding} label="Population" value={country.population?.toLocaleString() ?? "—"} />
+            <InfoItem
+              icon={ScrollText}
+              label="Official name"
+              value={country.name.official ?? "—"}
+            />
+            <InfoItem
+              icon={Earth}
+              label="Region"
+              value={`${country.region} · ${country.subregion ?? "—"}`}
+            />
+            <InfoItem
+              icon={Landmark}
+              label="Capital"
+              value={country.capital?.[0] ?? "—"}
+            />
+            <InfoItem
+              icon={PersonStanding}
+              label="Population"
+              value={country.population?.toLocaleString() ?? "—"}
+            />
             <InfoItem icon={Speech} label="Languages" value={languages} />
             <InfoItem icon={HandCoins} label="Currency" value={currency} />
-            <InfoItem icon={Wallpaper} label="Top level domain" value={country.tld?.join(", ") ?? "—"} />
+            <InfoItem
+              icon={Wallpaper}
+              label="Top level domain"
+              value={country.tld?.join(", ") ?? "—"}
+            />
           </dl>
 
           {/* WEATHER */}
-          <section className="mt-4 border-t border-primary pt-2">
-            <h3 className="font-semibold text-lg text-primary">
-              Current Weather
-            </h3>
-            {weatherLoading && <p>Loading weather...</p>}
-            {weatherError && <p className="text-primary">{weatherError}</p>}
-            {weather && (
-              <p>
-                🌡️ {weather.temperature}°C {weatherEmoji(weather.temperature)} ·
-                💨 {weather.windspeed} km/h
-              </p>
-            )}
-            {!weather && !weatherLoading && !weatherError && (
-              <p>— No weather data available —</p>
-            )}
-          </section>
+          {weatherInfoCard ? (
+            <dl className="mt-4 border-t border-primary pt-2">
+              <InfoItem
+                icon={Thermometer}
+                label="Current Weather"
+                value={
+                  weatherLoading
+                    ? "Loading..."
+                    : weatherError
+                      ? "Unavailable"
+                      : weather
+                        ? `${weather.temperature}°C ${weatherEmoji(weather.temperature)} · 💨 ${weather.windspeed} km/h`
+                        : "—"
+                }
+              />
+            </dl>
+          ) : (
+            <section className="mt-4 border-t border-primary pt-2">
+              <h3 className="font-semibold text-lg text-primary">
+                Current Weather
+              </h3>
+              {weatherLoading && <p>Loading weather...</p>}
+              {weatherError && <p className="text-primary">{weatherError}</p>}
+              {weather && (
+                <p>
+                  🌡️ {weather.temperature}°C {weatherEmoji(weather.temperature)}{" "}
+                  · 💨 {weather.windspeed} km/h
+                </p>
+              )}
+              {!weather && !weatherLoading && !weatherError && (
+                <p>— No weather data available —</p>
+              )}
+            </section>
+          )}
 
           {/* FLAG GUIDE */}
           {showMnemonic && mnemonic && (
             <section className="mt-4 border-t border-primary pt-2">
-              <h3 className="font-semibold text-lg text-primary">How to remember this flag!</h3>
-              <dl className="space-y-2 mt-2 text-sm text-foreground">
-                <div>
-                  <dt className="font-semibold text-muted-foreground">Pattern:</dt>
-                  <dd>{mnemonic.pattern.replace(/_/g, " ")}</dd>
-                </div>
-                <div>
-                  <dt className="font-semibold text-muted-foreground">Colors mean:</dt>
-                  <dd>{mnemonic.meaning}</dd>
-                </div>
-                <div>
-                  <dt className="font-semibold text-muted-foreground">Remember it by:</dt>
-                  <dd className="italic">"{mnemonic.mnemonic}"</dd>
-                </div>
-                <div>
-                  <dt className="font-semibold text-muted-foreground">Difficulty:</dt>
-                  <dd>{"⭐".repeat(mnemonic.difficulty)}</dd>
-                </div>
-                {mnemonic.confused_with.length > 0 && (
-                  <div>
-                    <dt className="font-semibold text-muted-foreground">Often confused with:</dt>
-                    <dd>{mnemonic.confused_with.join(", ")}</dd>
+              <h3 className="font-semibold text-lg text-primary">
+                How to remember this flag!
+              </h3>
+              <dl className="space-y-2 mt-2">
+                <InfoItem
+                  icon={Grid2x2}
+                  label="Flag pattern"
+                  value={mnemonic.pattern}
+                />
+                <InfoItem
+                  icon={Palette}
+                  label="What it means"
+                  value={mnemonic.meaning}
+                />
+                <InfoItem
+                  icon={Brain}
+                  label="Mnemonic"
+                  value={mnemonic.mnemonic}
+                />
+                <InfoItem
+                  icon={Star}
+                  label="Difficulty"
+                  value={"⭐".repeat(mnemonic.difficulty)}
+                />
+                {mnemonic.confused_with.length > 0 ? (
+                  <div className="gradient-border p-2 card-hover">
+                    <div className="flex items-center gap-4">
+                      <div className="flex items-center justify-center p-3 rounded-full bg-primary/10 flex-shrink-0">
+                        <AlertTriangle
+                          className="h-6 w-6 text-primary"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <div className="text-left flex-1">
+                        <dt className="font-semibold text-lg text-muted-foreground">
+                          Often confused with:
+                        </dt>
+                        <dd className="flex flex-wrap gap-2 mt-1">
+                          {mnemonic.confused_with.map((code) => {
+                            const confused = (
+                              flagMnemonics as FlagMnemonic[]
+                            ).find((m) => m.cca3 === code);
+                            return (
+                              <div
+                                key={code}
+                                className="flex items-center gap-1"
+                              >
+                                {confused?.flag_url && (
+                                  <img
+                                    src={confused.flag_url}
+                                    alt={code}
+                                    className="w-8 h-5 object-cover rounded border"
+                                  />
+                                )}
+                                <span className="text-sm">{code}</span>
+                              </div>
+                            );
+                          })}
+                        </dd>
+                      </div>
+                    </div>
                   </div>
+                ) : (
+                  <InfoItem
+                    icon={AlertTriangle}
+                    label="Often confused with"
+                    value="None"
+                  />
                 )}
               </dl>
             </section>
@@ -380,37 +485,37 @@ export default function CountryDetail({ cca3, hideBackBtn, showMnemonic, hideWik
 
           {/* WIKIPEDIA */}
           {!hideWiki && (
-          <section className="mt-4 border-t border-primary pt-2">
-            <h3 className="font-semibold text-lg text-primary">About</h3>
-            {wikiLoading && <p>Loading article summary...</p>}
-            {wikiError && (
-              <div>
-                <p className="text-primary mb-2">
-                  Failed to load Wikipedia summary.
-                </p>
-                <p className="mb-2 text-sm text-foreground">{wikiError}</p>
-                <Button onClick={retryWiki}>Try again</Button>
-              </div>
-            )}
-            {wiki && !wikiError && (
-              <article className="mt-2 text-sm text-foreground">
-                <h4 className="font-bold">{wiki.title}</h4>
-                <p className="mt-2 font-semibold">
-                  {wiki.extract || "No summary available."}
-                </p>
-                <p className="mt-2">
-                  <a
-                    className="text-primary underline"
-                    href={wiki.url}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Read full article on Wikipedia
-                  </a>
-                </p>
-              </article>
-            )}
-          </section>
+            <section className="mt-4 border-t border-primary pt-2">
+              <h3 className="font-semibold text-lg text-primary">About</h3>
+              {wikiLoading && <p>Loading article summary...</p>}
+              {wikiError && (
+                <div>
+                  <p className="text-primary mb-2">
+                    Failed to load Wikipedia summary.
+                  </p>
+                  <p className="mb-2 text-sm text-foreground">{wikiError}</p>
+                  <Button onClick={retryWiki}>Try again</Button>
+                </div>
+              )}
+              {wiki && !wikiError && (
+                <article className="mt-2 text-sm text-foreground">
+                  <h4 className="font-bold">{wiki.title}</h4>
+                  <p className="mt-2 font-semibold">
+                    {wiki.extract || "No summary available."}
+                  </p>
+                  <p className="mt-2">
+                    <a
+                      className="text-primary underline"
+                      href={wiki.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Read full article on Wikipedia
+                    </a>
+                  </p>
+                </article>
+              )}
+            </section>
           )}
         </section>
       </article>

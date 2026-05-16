@@ -1,11 +1,12 @@
 [
-    {
+  {
     "cca3": "ALB",
     "pattern": "symbol_center",
     "meaning": "The black double-headed eagle represents sovereignty and strength.",
     "mnemonic": "Black eagle on red background",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/al.svg"
   },
   {
     "cca3": "AND",
@@ -13,7 +14,8 @@
     "meaning": "Colors reflect shared history with France and Spain, with a central coat of arms.",
     "mnemonic": "France colors + coat of arms",
     "confused_with": ["ROU", "MDA"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/ad.svg"
   },
   {
     "cca3": "AUT",
@@ -21,7 +23,8 @@
     "meaning": "One of the oldest flags, symbolizing a historic banner.",
     "mnemonic": "Red-white-red sandwich",
     "confused_with": ["LVA"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/at.svg"
   },
   {
     "cca3": "BEL",
@@ -30,6 +33,7 @@
     "mnemonic": "Germany but vertical",
     "confused_with": ["DEU"],
     "difficulty": 2
+    ,"flag_url": "https://flagcdn.com/be.svg"
   },
   {
     "cca3": "BGR",
@@ -37,7 +41,8 @@
     "meaning": "White for peace, green for land, red for courage.",
     "mnemonic": "Russia but green instead of blue",
     "confused_with": ["RUS", "HUN"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/bg.svg"
   },
   {
     "cca3": "HRV",
@@ -45,7 +50,8 @@
     "meaning": "Pan-Slavic colors with a distinctive checkerboard crest.",
     "mnemonic": "Slavic stripes + checkerboard",
     "confused_with": ["SRB", "SVN"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/hr.svg"
   },
   {
     "cca3": "CZE",
@@ -53,7 +59,8 @@
     "meaning": "Represents Bohemia and Slovakia unity.",
     "mnemonic": "Poland + blue triangle",
     "confused_with": ["SVK"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/cz.svg"
   },
   {
     "cca3": "DNK",
@@ -61,7 +68,8 @@
     "meaning": "Christian cross and one of the oldest national flags.",
     "mnemonic": "Red with white cross",
     "confused_with": ["NOR"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/dk.svg"
   },
   {
     "cca3": "EST",
@@ -69,7 +77,8 @@
     "meaning": "Blue sky, black land, white future.",
     "mnemonic": "Blue-black-white dark stripes",
     "confused_with": ["LVA", "LTU"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/ee.svg"
   },
   {
     "cca3": "FIN",
@@ -77,7 +86,8 @@
     "meaning": "Blue lakes over white snow.",
     "mnemonic": "White snow + blue cross",
     "confused_with": ["SWE"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/fi.svg"
   },
   {
     "cca3": "GRC",
@@ -85,7 +95,8 @@
     "meaning": "Represents sea, sky, and Orthodox Christianity.",
     "mnemonic": "Stripes + corner cross",
     "confused_with": ["URY"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/gr.svg"
   },
   {
     "cca3": "HUN",
@@ -93,7 +104,8 @@
     "meaning": "Red for strength, white for faith, green for hope.",
     "mnemonic": "Italy but horizontal",
     "confused_with": ["BGR"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/hu.svg"
   },
   {
     "cca3": "ISL",
@@ -101,7 +113,8 @@
     "meaning": "Fire and ice represented in colors.",
     "mnemonic": "Norway but inverted colors",
     "confused_with": ["NOR"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/is.svg"
   },
   {
     "cca3": "LVA",
@@ -109,7 +122,8 @@
     "meaning": "Historic Latvian banner.",
     "mnemonic": "Austria but darker red + thin white",
     "confused_with": ["AUT"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/ee.svg"
   },
   {
     "cca3": "LTU",
@@ -117,7 +131,8 @@
     "meaning": "Sun, land, and blood.",
     "mnemonic": "Traffic light (yellow-green-red)",
     "confused_with": ["BOL"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/lt.svg"
   },
   {
     "cca3": "MDA",
@@ -125,7 +140,8 @@
     "meaning": "Shared heritage with Romania, with national coat of arms.",
     "mnemonic": "Romania + eagle crest",
     "confused_with": ["ROU", "AND"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/md.svg"
   },
   {
     "cca3": "MNE",
@@ -133,7 +149,8 @@
     "meaning": "Royal heritage and national emblem.",
     "mnemonic": "Red with gold border + eagle",
     "confused_with": ["ALB"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/me.svg"
   },
   {
     "cca3": "MKD",
@@ -141,7 +158,8 @@
     "meaning": "Represents the sun of liberty.",
     "mnemonic": "Sun exploding from center",
     "confused_with": ["JPN"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/mk.svg"
   },
   {
     "cca3": "NOR",
@@ -149,7 +167,8 @@
     "meaning": "Represents freedom and independence.",
     "mnemonic": "Denmark + blue inside cross",
     "confused_with": ["ISL", "SWE"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/no.svg"
   },
   {
     "cca3": "POL",
@@ -157,7 +176,8 @@
     "meaning": "White for peace, red for courage.",
     "mnemonic": "White top, red bottom",
     "confused_with": ["IDN"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/pl.svg"
   },
   {
     "cca3": "PRT",
@@ -165,7 +185,8 @@
     "meaning": "Represents revolution and maritime history.",
     "mnemonic": "Green-red split with crest",
     "confused_with": ["ITA"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/pt.svg"
   },
   {
     "cca3": "ROU",
@@ -173,7 +194,8 @@
     "meaning": "Represents liberty and unity.",
     "mnemonic": "France + yellow middle",
     "confused_with": ["TCD", "MDA"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/ro.svg"
   },
   {
     "cca3": "SRB",
@@ -181,7 +203,8 @@
     "meaning": "Pan-Slavic unity with royal crest.",
     "mnemonic": "Russia stripes + crest",
     "confused_with": ["RUS", "SVK"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/rs.svg"
   },
   {
     "cca3": "SVK",
@@ -189,7 +212,8 @@
     "meaning": "Slavic identity and national shield.",
     "mnemonic": "Russia + shield",
     "confused_with": ["SVN", "SRB"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/sk.svg"
   },
   {
     "cca3": "SVN",
@@ -197,7 +221,8 @@
     "meaning": "Represents mountains, sea, and identity.",
     "mnemonic": "Slovakia but smaller crest",
     "confused_with": ["SVK", "SRB"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/si.svg"
   },
   {
     "cca3": "ESP",
@@ -205,7 +230,8 @@
     "meaning": "Historic kingdoms of Spain.",
     "mnemonic": "Big yellow stripe + crest",
     "confused_with": [],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/es.svg"
   },
   {
     "cca3": "CHE",
@@ -213,7 +239,8 @@
     "meaning": "Symbol of neutrality and peace.",
     "mnemonic": "Red square with white plus",
     "confused_with": ["DNK"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/ch.svg"
   },
   {
     "cca3": "UKR",
@@ -221,7 +248,8 @@
     "meaning": "Blue sky over yellow wheat fields.",
     "mnemonic": "Blue over yellow",
     "confused_with": [],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/ua.svg"
   },
   {
     "cca3": "ARE",
@@ -229,7 +257,8 @@
     "meaning": "Represents Arab unity.",
     "mnemonic": "3 stripes + vertical red bar",
     "confused_with": ["KWT"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ae.svg"
   },
   {
     "cca3": "JOR",
@@ -237,7 +266,8 @@
     "meaning": "Represents Arab revolt.",
     "mnemonic": "Stripes + red triangle with star",
     "confused_with": ["PSE"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/jo.svg"
   },
   {
     "cca3": "QAT",
@@ -245,7 +275,8 @@
     "meaning": "Represents historic conflicts.",
     "mnemonic": "Zigzag maroon-white",
     "confused_with": ["BHR"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/qa.svg"
   },
   {
     "cca3": "BHR",
@@ -253,7 +284,8 @@
     "meaning": "Symbolizes Islamic heritage.",
     "mnemonic": "Zigzag red-white (fewer spikes)",
     "confused_with": ["QAT"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/bh.svg"
   },
   {
     "cca3": "DZA",
@@ -261,7 +293,8 @@
     "meaning": "Green represents Islam, white peace, with a red crescent and star.",
     "mnemonic": "Half green, half white + red moon and star",
     "confused_with": ["PAK"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/dz.svg"
   },
   {
     "cca3": "AGO",
@@ -269,7 +302,8 @@
     "meaning": "Red for struggle, black for Africa, with a gear and machete.",
     "mnemonic": "Red-black with yellow gear symbol",
     "confused_with": ["MOZ"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/ao.svg"
   },
   {
     "cca3": "BEN",
@@ -277,7 +311,8 @@
     "meaning": "Green hope, yellow wealth, red courage.",
     "mnemonic": "Green block + yellow-red stripes",
     "confused_with": ["GNB"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/bj.svg"
   },
   {
     "cca3": "BWA",
@@ -285,7 +320,8 @@
     "meaning": "Blue for water, black and white for harmony.",
     "mnemonic": "Blue with black-white stripe",
     "confused_with": ["NAM"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/bw.svg"
   },
   {
     "cca3": "BFA",
@@ -293,7 +329,8 @@
     "meaning": "Red revolution, green land, yellow star.",
     "mnemonic": "Red-green with yellow star",
     "confused_with": ["GHA"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/bf.svg"
   },
   {
     "cca3": "BDI",
@@ -301,7 +338,8 @@
     "meaning": "Unity with stars representing groups.",
     "mnemonic": "White X with red/green and stars",
     "confused_with": ["RWA"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/bi.svg"
   },
   {
     "cca3": "CMR",
@@ -309,7 +347,8 @@
     "meaning": "Unity and independence.",
     "mnemonic": "Green-red-yellow + star",
     "confused_with": ["SEN", "MLI"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/cm.svg"
   },
   {
     "cca3": "CPV",
@@ -317,7 +356,8 @@
     "meaning": "Ocean and unity with stars.",
     "mnemonic": "Blue stripes + circle of stars",
     "confused_with": ["EU"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/cv.svg"
   },
   {
     "cca3": "CAF",
@@ -325,7 +365,8 @@
     "meaning": "Unity of France and Africa.",
     "mnemonic": "French stripes + red vertical line",
     "confused_with": [],
-    "difficulty": 4
+    "difficulty": 4,
+    "flag_url": "https://flagcdn.com/cf.svg"
   },
   {
     "cca3": "TCD",
@@ -333,7 +374,8 @@
     "meaning": "Hope, unity, sacrifice.",
     "mnemonic": "Romania but darker blue",
     "confused_with": ["ROU"],
-    "difficulty": 5
+    "difficulty": 5,
+    "flag_url": "https://flagcdn.com/td.svg"
   },
   {
     "cca3": "COM",
@@ -341,7 +383,8 @@
     "meaning": "Islam and island unity.",
     "mnemonic": "Stripes + green triangle with crescent",
     "confused_with": ["MDG"],
-    "difficulty": 4
+    "difficulty": 4,
+    "flag_url": "https://flagcdn.com/km.svg"
   },
   {
     "cca3": "COG",
@@ -349,7 +392,8 @@
     "meaning": "Hope, wealth, sacrifice.",
     "mnemonic": "Green-yellow-red diagonal",
     "confused_with": ["COD"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/cg.svg"
   },
   {
     "cca3": "COD",
@@ -357,7 +401,8 @@
     "meaning": "Hope and unity.",
     "mnemonic": "Blue with red diagonal stripe + star",
     "confused_with": ["COG"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/cd.svg"
   },
   {
     "cca3": "CIV",
@@ -365,7 +410,8 @@
     "meaning": "Land, peace, hope.",
     "mnemonic": "Ireland but flipped",
     "confused_with": ["IRL"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ci.svg"
   },
   {
     "cca3": "EGY",
@@ -373,7 +419,8 @@
     "meaning": "Arab unity and strength.",
     "mnemonic": "Red-white-black + eagle",
     "confused_with": ["IRQ", "SYR"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/eg.svg"
   },
   {
     "cca3": "ETH",
@@ -381,7 +428,8 @@
     "meaning": "Pan-African colors with emblem.",
     "mnemonic": "Green-yellow-red + blue circle",
     "confused_with": ["GHA"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/et.svg"
   },
   {
     "cca3": "GHA",
@@ -389,7 +437,8 @@
     "meaning": "Freedom and African unity.",
     "mnemonic": "Red-yellow-green + black star",
     "confused_with": ["ETH"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/gh.svg"
   },
   {
     "cca3": "KEN",
@@ -397,7 +446,8 @@
     "meaning": "Struggle and peace with shield.",
     "mnemonic": "Black-red-green + shield",
     "confused_with": ["SSD"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ke.svg"
   },
   {
     "cca3": "MAR",
@@ -405,7 +455,8 @@
     "meaning": "Green star represents Islam.",
     "mnemonic": "Red with green star",
     "confused_with": ["TUN"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/ma.svg"
   },
   {
     "cca3": "NGA",
@@ -413,7 +464,8 @@
     "meaning": "Agriculture and peace.",
     "mnemonic": "Green-white-green",
     "confused_with": [],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/ng.svg"
   },
   {
     "cca3": "ZAF",
@@ -421,7 +473,8 @@
     "meaning": "Unity of diverse cultures.",
     "mnemonic": "Colorful Y shape",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/za.svg"
   },
   {
     "cca3": "RWA",
@@ -429,7 +482,8 @@
     "meaning": "Unity and hope with stars.",
     "mnemonic": "White X with blue/red and stars",
     "confused_with": ["BDI"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/rw.svg"
   },
   {
     "cca3": "SEN",
@@ -437,7 +491,8 @@
     "meaning": "Hope, unity, sacrifice.",
     "mnemonic": "Green-yellow-red + green star",
     "confused_with": ["CMR", "MLI"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/sn.svg"
   },
   {
     "cca3": "SOM",
@@ -445,7 +500,8 @@
     "meaning": "Unity of Somali people.",
     "mnemonic": "Light blue with white star",
     "confused_with": [],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/so.svg"
   },
   {
     "cca3": "SSD",
@@ -453,7 +509,8 @@
     "meaning": "Struggle for independence.",
     "mnemonic": "Black-red-green + blue triangle with star",
     "confused_with": ["KEN"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ss.svg"
   },
   {
     "cca3": "SDN",
@@ -461,7 +518,8 @@
     "meaning": "Islamic heritage and unity.",
     "mnemonic": "Red-white-black + green triangle with star",
     "confused_with": ["EGY", "IRQ", "SYR"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/sd.svg"
   },
   {
     "cca3": "TUN",
@@ -469,7 +527,8 @@
     "meaning": "Red for blood, white for peace, crescent and star for Islam.",
     "mnemonic": "Red with white circle + crescent/star",
     "confused_with": ["MAR"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/tn.svg"
   },
   {
     "cca3": "UGA",
@@ -477,7 +536,8 @@
     "meaning": "African unity and wildlife.",
     "mnemonic": "Black-yellow-red + grey crowned crane",
     "confused_with": ["SSD"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ug.svg"
   },
   {
     "cca3": "ZMB",
@@ -485,7 +545,8 @@
     "meaning": "Freedom and natural resources.",
     "mnemonic": "Green-red-black-orange + eagle",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/zm.svg"
   },
   {
     "cca3": "ZWE",
@@ -493,7 +554,8 @@
     "meaning": "Unity and heritage.",
     "mnemonic": "Green-yellow-red-black + yellow star with Zimbabwe bird",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/zw.svg"
   },
   {
     "cca3": "MDV",
@@ -501,7 +563,8 @@
     "meaning": "Islamic heritage and island unity.",
     "mnemonic": "Green-white-red stripes + crescent/star",
     "confused_with": ["COM"],
-    "difficulty": 4
+    "difficulty": 4,
+    "flag_url": "https://flagcdn.com/mv.svg"
   },
   {
     "cca3": "MDG",
@@ -509,7 +572,8 @@
     "meaning": "Unity and hope for the future.",
     "mnemonic": "Stripes + red triangle with white star",
     "confused_with": ["COM"],
-    "difficulty": 4
+    "difficulty": 4,
+    "flag_url": "https://flagcdn.com/mg.svg"
   },
   {
     "cca3": "MOZ",
@@ -517,7 +581,8 @@
     "meaning": "Struggle for independence and natural resources.",
     "mnemonic": "Green-black with yellow star symbol",
     "confused_with": ["AGO"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/mz.svg"
   },
   {
     "cca3": "GNB",
@@ -525,7 +590,8 @@
     "meaning": "Green hope, yellow wealth, red courage.",
     "mnemonic": "Green block + yellow-red stripes",
     "confused_with": ["BEN"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/gw.svg"
   },
   {
     "cca3": "NER",
@@ -533,7 +599,8 @@
     "meaning": "Hope and sacrifice with sun symbol.",
     "mnemonic": "Orange-white-green + yellow sun",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ne.svg"
   },
   {
     "cca3": "MLI",
@@ -541,7 +608,8 @@
     "meaning": "Hope, unity, sacrifice.",
     "mnemonic": "Green-yellow-red + black star",
     "confused_with": ["CMR", "SEN"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ml.svg"
   },
   {
     "cca3": "GMB",
@@ -549,7 +617,8 @@
     "meaning": "Unity and hope for the future.",
     "mnemonic": "Red-blue-green stripes + white star",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/gm.svg"
   },
   {
     "cca3": "AFG",
@@ -557,7 +626,8 @@
     "meaning": "Black for past, red for struggle, green for hope, with national emblem.",
     "mnemonic": "Dark tricolor with detailed crest",
     "confused_with": ["DEU"],
-    "difficulty": 4
+    "difficulty": 4,
+    "flag_url": "https://flagcdn.com/af.svg"
   },
   {
     "cca3": "ARM",
@@ -565,7 +635,8 @@
     "meaning": "Red for struggle, blue for peace, orange for land.",
     "mnemonic": "Red-blue-orange stripes",
     "confused_with": ["COL"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/am.svg"
   },
   {
     "cca3": "AZE",
@@ -573,7 +644,8 @@
     "meaning": "Turkic identity and Islam.",
     "mnemonic": "Blue-red-green + white crescent and star",
     "confused_with": ["UZB"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/az.svg"
   },
   {
     "cca3": "BGD",
@@ -581,7 +653,8 @@
     "meaning": "Red sun over green land.",
     "mnemonic": "Green with red circle (off-center)",
     "confused_with": ["JPN"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/bd.svg"
   },
   {
     "cca3": "BTN",
@@ -589,7 +662,8 @@
     "meaning": "Dragon represents strength and protection.",
     "mnemonic": "Yellow-orange diagonal with dragon",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/bt.svg"
   },
   {
     "cca3": "BRN",
@@ -597,7 +671,8 @@
     "meaning": "Royal authority and Islam.",
     "mnemonic": "Yellow with diagonal stripes + crest",
     "confused_with": ["MYS"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/bn.svg"
   },
   {
     "cca3": "KHM",
@@ -605,7 +680,8 @@
     "meaning": "Angkor Wat symbolizes heritage.",
     "mnemonic": "Blue-red-blue with temple",
     "confused_with": ["THA"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/kh.svg"
   },
   {
     "cca3": "CHN",
@@ -613,7 +689,8 @@
     "meaning": "Large star for leadership, small stars for people.",
     "mnemonic": "Big star + four small ones",
     "confused_with": ["VNM"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/cn.svg"
   },
   {
     "cca3": "GEO",
@@ -621,7 +698,8 @@
     "meaning": "Christian crosses symbolize faith.",
     "mnemonic": "Big red cross + 4 small crosses",
     "confused_with": ["ENG"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ge.svg"
   },
   {
     "cca3": "IND",
@@ -629,7 +707,8 @@
     "meaning": "Courage, peace, growth, with Ashoka Chakra.",
     "mnemonic": "Orange-white-green + blue wheel",
     "confused_with": ["NER"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/in.svg"
   },
   {
     "cca3": "IDN",
@@ -637,7 +716,8 @@
     "meaning": "Courage and purity.",
     "mnemonic": "Red over white",
     "confused_with": ["POL", "MCO"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/id.svg"
   },
   {
     "cca3": "IRN",
@@ -645,7 +725,8 @@
     "meaning": "Islamic republic symbolism.",
     "mnemonic": "Green-white-red + red emblem",
     "confused_with": ["HUN"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/ir.svg"
   },
   {
     "cca3": "IRQ",
@@ -653,7 +734,8 @@
     "meaning": "Arab unity and faith.",
     "mnemonic": "Red-white-black + Arabic text",
     "confused_with": ["SYR"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/iq.svg"
   },
   {
     "cca3": "ISR",
@@ -661,7 +743,8 @@
     "meaning": "Star of David and Jewish identity.",
     "mnemonic": "Blue stripes + star",
     "confused_with": [],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/il.svg"
   },
   {
     "cca3": "JPN",
@@ -669,7 +752,8 @@
     "meaning": "Represents the sun.",
     "mnemonic": "Red circle on white",
     "confused_with": ["BGD"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/jp.svg"
   },
   {
     "cca3": "KAZ",
@@ -677,7 +761,8 @@
     "meaning": "Sky and freedom with eagle.",
     "mnemonic": "Light blue with golden eagle",
     "confused_with": ["MNG"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/kz.svg"
   },
   {
     "cca3": "KWT",
@@ -685,7 +770,8 @@
     "meaning": "Arab unity.",
     "mnemonic": "Green-white-red + black trapezoid",
     "confused_with": ["ARE"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/kw.svg"
   },
   {
     "cca3": "LAO",
@@ -693,7 +779,8 @@
     "meaning": "Unity and full moon over Mekong.",
     "mnemonic": "Red-blue-red + white circle",
     "confused_with": ["THA"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/la.svg"
   },
   {
     "cca3": "LBN",
@@ -701,7 +788,8 @@
     "meaning": "Cedar tree represents strength.",
     "mnemonic": "Red-white-red + green tree",
     "confused_with": [],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/lb.svg"
   },
   {
     "cca3": "MYS",
@@ -709,7 +797,8 @@
     "meaning": "Unity and Islam.",
     "mnemonic": "US-style stripes + crescent",
     "confused_with": ["USA"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/my.svg"
   },
   {
     "cca3": "MNG",
@@ -717,7 +806,8 @@
     "meaning": "Freedom and independence.",
     "mnemonic": "Red-blue-red + symbol",
     "confused_with": ["KAZ"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/mn.svg"
   },
   {
     "cca3": "NPL",
@@ -725,7 +815,8 @@
     "meaning": "Himalayas and unity.",
     "mnemonic": "Only non-rectangular flag",
     "confused_with": [],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/np.svg"
   },
   {
     "cca3": "PRK",
@@ -733,7 +824,8 @@
     "meaning": "Revolution and unity.",
     "mnemonic": "Blue-red-blue + red star",
     "confused_with": ["KOR"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/kp.svg"
   },
   {
     "cca3": "KOR",
@@ -741,7 +833,8 @@
     "meaning": "Balance and harmony.",
     "mnemonic": "Yin-yang + black bars",
     "confused_with": ["JPN"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/kr.svg"
   },
   {
     "cca3": "SAU",
@@ -749,7 +842,8 @@
     "meaning": "Islamic creed and sword.",
     "mnemonic": "Green with Arabic text",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/sa.svg"
   },
   {
     "cca3": "SGP",
@@ -757,7 +851,8 @@
     "meaning": "Progress and unity.",
     "mnemonic": "Red-white + crescent and stars",
     "confused_with": ["IDN"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/sg.svg"
   },
   {
     "cca3": "LKA",
@@ -765,7 +860,8 @@
     "meaning": "Lion symbolizes strength.",
     "mnemonic": "Lion holding sword on red",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/lk.svg"
   },
   {
     "cca3": "SYR",
@@ -773,7 +869,8 @@
     "meaning": "Arab unity.",
     "mnemonic": "Red-white-black + two green stars",
     "confused_with": ["IRQ"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/sy.svg"
   },
   {
     "cca3": "THA",
@@ -781,7 +878,8 @@
     "meaning": "Nation, religion, king.",
     "mnemonic": "Red-white-blue-white-red",
     "confused_with": ["CRI"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/th.svg"
   },
   {
     "cca3": "TUR",
@@ -789,7 +887,8 @@
     "meaning": "Islamic symbolism.",
     "mnemonic": "Red with white moon and star",
     "confused_with": ["TUN"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/tr.svg"
   },
   {
     "cca3": "VNM",
@@ -797,7 +896,8 @@
     "meaning": "Unity under communism.",
     "mnemonic": "Red with yellow star",
     "confused_with": ["CHN"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/vn.svg"
   },
   {
     "cca3": "YEM",
@@ -805,7 +905,8 @@
     "meaning": "Unity and struggle.",
     "mnemonic": "Red-white-black horizontal stripes",
     "confused_with": ["EGY", "IRQ", "SYR"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/ye.svg"
   },
   {
     "cca3": "PSE",
@@ -813,7 +914,8 @@
     "meaning": "Palestinian identity and struggle.",
     "mnemonic": "Stripes + red triangle with star",
     "confused_with": ["JOR"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ps.svg"
   },
   {
     "cca3": "ARG",
@@ -821,7 +923,8 @@
     "meaning": "Sky and clouds with the Sun of May.",
     "mnemonic": "Light blue-white-light blue + sun",
     "confused_with": ["URY"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ar.svg"
   },
   {
     "cca3": "BOL",
@@ -829,7 +932,8 @@
     "meaning": "Red for bravery, yellow for resources, green for land.",
     "mnemonic": "Red-yellow-green stripes",
     "confused_with": ["LTU"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/bo.svg"
   },
   {
     "cca3": "BRA",
@@ -837,7 +941,8 @@
     "meaning": "Green land, yellow wealth, blue sky with stars.",
     "mnemonic": "Green + yellow diamond + blue globe",
     "confused_with": [],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/br.svg"
   },
   {
     "cca3": "CAN",
@@ -845,7 +950,8 @@
     "meaning": "Peace and nature with maple leaf.",
     "mnemonic": "Red-white-red + maple leaf",
     "confused_with": [],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/ca.svg"
   },
   {
     "cca3": "CHL",
@@ -853,7 +959,8 @@
     "meaning": "Sky and independence.",
     "mnemonic": "US-like corner star + stripes",
     "confused_with": ["USA", "CUB"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/cl.svg"
   },
   {
     "cca3": "COL",
@@ -861,7 +968,8 @@
     "meaning": "Wealth, sea, and blood.",
     "mnemonic": "Big yellow stripe on top",
     "confused_with": ["ECU", "VEN"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/co.svg"
   },
   {
     "cca3": "CUB",
@@ -869,7 +977,8 @@
     "meaning": "Independence and freedom.",
     "mnemonic": "Stripes + red triangle with star",
     "confused_with": ["PRI"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/cu.svg"
   },
   {
     "cca3": "DOM",
@@ -877,7 +986,8 @@
     "meaning": "Faith and unity.",
     "mnemonic": "White cross splitting flag + crest",
     "confused_with": ["HTI"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/do.svg"
   },
   {
     "cca3": "ECU",
@@ -885,7 +995,8 @@
     "meaning": "Shared heritage with Gran Colombia.",
     "mnemonic": "Colombia + crest",
     "confused_with": ["COL"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/ec.svg"
   },
   {
     "cca3": "GTM",
@@ -893,7 +1004,8 @@
     "meaning": "Liberty and justice.",
     "mnemonic": "Blue-white-blue + emblem",
     "confused_with": ["HND"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/gt.svg"
   },
   {
     "cca3": "HTI",
@@ -901,7 +1013,8 @@
     "meaning": "Unity and freedom.",
     "mnemonic": "Blue-red + small crest",
     "confused_with": ["DOM"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/ht.svg"
   },
   {
     "cca3": "HND",
@@ -909,7 +1022,8 @@
     "meaning": "Unity of Central America.",
     "mnemonic": "Blue-white-blue + 5 stars",
     "confused_with": ["SLV", "NIC"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/hn.svg"
   },
   {
     "cca3": "JAM",
@@ -917,7 +1031,8 @@
     "meaning": "Sun, land, and strength.",
     "mnemonic": "Yellow X with green and black",
     "confused_with": [],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/jm.svg"
   },
   {
     "cca3": "MEX",
@@ -925,7 +1040,8 @@
     "meaning": "Independence and heritage.",
     "mnemonic": "Italy + eagle eating snake",
     "confused_with": ["ITA"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/mx.svg"
   },
   {
     "cca3": "USA",
@@ -933,7 +1049,8 @@
     "meaning": "States and unity.",
     "mnemonic": "Stars + stripes",
     "confused_with": ["MYS"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/us.svg"
   },
   {
     "cca3": "URY",
@@ -941,7 +1058,8 @@
     "meaning": "Freedom and independence.",
     "mnemonic": "Argentina + stripes and sun in corner",
     "confused_with": ["ARG"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/uy.svg"
   },
   {
     "cca3": "VEN",
@@ -949,7 +1067,8 @@
     "meaning": "Liberty and unity.",
     "mnemonic": "Colombia + arc of stars",
     "confused_with": ["COL"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ve.svg"
   },
   {
     "cca3": "AUS",
@@ -957,7 +1076,8 @@
     "meaning": "British heritage and southern stars.",
     "mnemonic": "UK corner + stars",
     "confused_with": ["NZL"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/au.svg"
   },
   {
     "cca3": "FJI",
@@ -965,7 +1085,8 @@
     "meaning": "Colonial heritage and national shield.",
     "mnemonic": "Light blue + UK corner + shield",
     "confused_with": ["TUV"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/fj.svg"
   },
   {
     "cca3": "NZL",
@@ -973,7 +1094,8 @@
     "meaning": "Southern Cross constellation.",
     "mnemonic": "Like Australia but fewer stars (red)",
     "confused_with": ["AUS"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/nz.svg"
   },
   {
     "cca3": "PNG",
@@ -981,7 +1103,8 @@
     "meaning": "Bird of paradise and stars.",
     "mnemonic": "Black-red diagonal + bird",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/png.svg"
   },
   {
     "cca3": "WSM",
@@ -989,7 +1112,8 @@
     "meaning": "Southern Cross and independence.",
     "mnemonic": "Red with blue corner + stars",
     "confused_with": ["TUV"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/ws.svg"
   },
   {
     "cca3": "TUV",
@@ -997,7 +1121,8 @@
     "meaning": "British heritage and island unity.",
     "mnemonic": "Light blue + UK corner + stars",
     "confused_with": ["FJI"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/tv.svg"
   },
   {
     "cca3": "SLV",
@@ -1005,7 +1130,8 @@
     "meaning": "Unity of Central America.",
     "mnemonic": "Blue-white-blue + coat of arms",
     "confused_with": ["HND", "NIC"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/sv.svg"
   },
   {
     "cca3": "NIC",
@@ -1013,7 +1139,8 @@
     "meaning": "Unity of Central America.",
     "mnemonic": "Blue-white-blue + coat of arms",
     "confused_with": ["HND", "SLV"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ni.svg"
   },
   {
     "cca3": "GBR",
@@ -1021,7 +1148,8 @@
     "meaning": "Union of England, Scotland, and Ireland.",
     "mnemonic": "Red and white crosses overlapping on blue",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/gb.svg"
   },
   {
     "cca3": "FRA",
@@ -1029,7 +1157,8 @@
     "meaning": "Liberty, equality, fraternity.",
     "mnemonic": "Blue-white-red vertical",
     "confused_with": ["ITA", "NLD"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/fr.svg"
   },
   {
     "cca3": "DEU",
@@ -1037,7 +1166,8 @@
     "meaning": "Unity and freedom.",
     "mnemonic": "Black-red-yellow stripes",
     "confused_with": ["BEL"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/de.svg"
   },
   {
     "cca3": "ITA",
@@ -1045,7 +1175,8 @@
     "meaning": "Hope, faith, charity.",
     "mnemonic": "Green-white-red vertical",
     "confused_with": ["MEX"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/it.svg"
   },
   {
     "cca3": "SWE",
@@ -1053,7 +1184,8 @@
     "meaning": "Christian heritage.",
     "mnemonic": "Blue with yellow cross",
     "confused_with": ["FIN"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/se.svg"
   },
   {
     "cca3": "NLD",
@@ -1061,7 +1193,8 @@
     "meaning": "Historic Dutch independence.",
     "mnemonic": "Red-white-blue stripes",
     "confused_with": ["LUX"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/nl.svg"
   },
   {
     "cca3": "IRL",
@@ -1069,7 +1202,8 @@
     "meaning": "Peace between traditions.",
     "mnemonic": "Green-white-orange vertical",
     "confused_with": ["CIV"],
-    "difficulty": 1
+    "difficulty": 1,
+    "flag_url": "https://flagcdn.com/ie.svg"
   },
   {
     "cca3": "LUX",
@@ -1077,7 +1211,8 @@
     "meaning": "Freedom and independence.",
     "mnemonic": "Netherlands but lighter blue",
     "confused_with": ["NLD"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/lu.svg"
   },
   {
     "cca3": "MLT",
@@ -1085,7 +1220,8 @@
     "meaning": "George Cross for bravery.",
     "mnemonic": "White-red with tiny cross in corner",
     "confused_with": ["POL"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/mt.svg"
   },
   {
     "cca3": "LIE",
@@ -1093,7 +1229,8 @@
     "meaning": "Prince’s crown symbolizes unity.",
     "mnemonic": "Blue-red with crown",
     "confused_with": ["HTI"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/li.svg"
   },
   {
     "cca3": "SMR",
@@ -1101,7 +1238,8 @@
     "meaning": "Liberty and independence.",
     "mnemonic": "White-blue with coat of arms",
     "confused_with": ["ARG"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/sm.svg"
   },
   {
     "cca3": "VAT",
@@ -1109,7 +1247,8 @@
     "meaning": "Papal authority.",
     "mnemonic": "Yellow-white with keys symbol",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/va.svg"
   },
 
   {
@@ -1118,7 +1257,8 @@
     "meaning": "Unity and peace.",
     "mnemonic": "Blue-green with white triangle + star",
     "confused_with": ["SOM"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/dj.svg"
   },
   {
     "cca3": "ERI",
@@ -1126,7 +1266,8 @@
     "meaning": "Struggle for independence.",
     "mnemonic": "Red triangle with green/blue + wreath",
     "confused_with": ["DJI"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/er.svg"
   },
   {
     "cca3": "GAB",
@@ -1134,7 +1275,8 @@
     "meaning": "Sun, sea, forest.",
     "mnemonic": "Green-yellow-blue stripes",
     "confused_with": ["RWA"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ga.svg"
   },
   {
     "cca3": "GIN",
@@ -1142,7 +1284,8 @@
     "meaning": "Unity and work.",
     "mnemonic": "Red-yellow-green vertical",
     "confused_with": ["MLI", "SEN"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/gn.svg"
   },
   {
     "cca3": "GNQ",
@@ -1150,7 +1293,8 @@
     "meaning": "Peace, unity, justice.",
     "mnemonic": "Green-white-red + blue triangle + crest",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/gq.svg"
   },
   {
     "cca3": "LSO",
@@ -1158,7 +1302,8 @@
     "meaning": "Peace and rain.",
     "mnemonic": "Blue-white-green + black hat",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ls.svg"
   },
   {
     "cca3": "LBR",
@@ -1166,7 +1311,8 @@
     "meaning": "Inspired by USA.",
     "mnemonic": "US style but one star",
     "confused_with": ["USA"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/lr.svg"
   },
   {
     "cca3": "LBY",
@@ -1174,7 +1320,8 @@
     "meaning": "Freedom and Islam.",
     "mnemonic": "Red-black-green + crescent/star",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ly.svg"
   },
   {
     "cca3": "MWI",
@@ -1182,7 +1329,8 @@
     "meaning": "Dawn of freedom.",
     "mnemonic": "Black-red-green + rising sun",
     "confused_with": ["KEN"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/mw.svg"
   },
   {
     "cca3": "MRT",
@@ -1190,7 +1338,8 @@
     "meaning": "Islamic identity.",
     "mnemonic": "Green with crescent and star",
     "confused_with": ["PAK"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/mr.svg"
   },
   {
     "cca3": "MUS",
@@ -1198,7 +1347,8 @@
     "meaning": "Independence and harmony.",
     "mnemonic": "Red-blue-yellow-green stripes",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/mu.svg"
   },
   {
     "cca3": "NAM",
@@ -1206,7 +1356,8 @@
     "meaning": "Sun and life.",
     "mnemonic": "Blue-red-green diagonal + sun",
     "confused_with": ["BWA"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/nm.svg"
   },
   {
     "cca3": "SLE",
@@ -1214,7 +1365,8 @@
     "meaning": "Unity and justice.",
     "mnemonic": "Green-white-blue stripes",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/sl.svg"
   },
   {
     "cca3": "SWZ",
@@ -1222,7 +1374,8 @@
     "meaning": "Protection and culture.",
     "mnemonic": "Red-blue-yellow + shield",
     "confused_with": ["KEN"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/sz.svg"
   },
   {
     "cca3": "TZA",
@@ -1230,7 +1383,8 @@
     "meaning": "Land, minerals, water.",
     "mnemonic": "Green-black-blue diagonal",
     "confused_with": ["NAM"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/tz.svg"
   },
 
   {
@@ -1239,7 +1393,8 @@
     "meaning": "Sky, peace, nature.",
     "mnemonic": "Blue-white-green + crescent and stars",
     "confused_with": ["AZE"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/uz.svg"
   },
   {
     "cca3": "TKM",
@@ -1247,7 +1402,8 @@
     "meaning": "Cultural heritage.",
     "mnemonic": "Green with red carpet stripe",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/tk.svg"
   },
   {
     "cca3": "KGZ",
@@ -1255,7 +1411,8 @@
     "meaning": "Sun and unity.",
     "mnemonic": "Red with yellow sun lines",
     "confused_with": ["MKD"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/kg.svg"
   },
   {
     "cca3": "TJK",
@@ -1263,7 +1420,8 @@
     "meaning": "Unity and sovereignty.",
     "mnemonic": "Red-white-green + crown",
     "confused_with": ["IRN"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/tj.svg"
   },
   {
     "cca3": "OMN",
@@ -1271,7 +1429,8 @@
     "meaning": "History and strength.",
     "mnemonic": "White-red-green + emblem in corner",
     "confused_with": ["ARE"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/om.svg"
   },
 
   {
@@ -1280,7 +1439,8 @@
     "meaning": "Sunrise of a new era.",
     "mnemonic": "Black top + rising sun + blue waves",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/at.svg"
   },
   {
     "cca3": "BHS",
@@ -1288,7 +1448,8 @@
     "meaning": "Sea and beaches.",
     "mnemonic": "Black triangle + aqua and yellow",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/bs.svg"
   },
   {
     "cca3": "BRB",
@@ -1296,7 +1457,8 @@
     "meaning": "Broken trident for independence.",
     "mnemonic": "Blue-yellow-blue + black trident",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/br.svg"
   },
   {
     "cca3": "BLZ",
@@ -1304,7 +1466,8 @@
     "meaning": "National unity.",
     "mnemonic": "Blue with red edges + big white circle crest",
     "confused_with": [],
-    "difficulty": 4
+    "difficulty": 4,
+    "flag_url": "https://flagcdn.com/bl.svg"
   },
   {
     "cca3": "DMA",
@@ -1312,7 +1475,8 @@
     "meaning": "Nature and culture.",
     "mnemonic": "Green with cross + parrot",
     "confused_with": [],
-    "difficulty": 4
+    "difficulty": 4,
+    "flag_url": "https://flagcdn.com/dm.svg"
   },
   {
     "cca3": "GRD",
@@ -1320,7 +1484,8 @@
     "meaning": "Unity and agriculture.",
     "mnemonic": "Red border + green/yellow + nutmeg",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/gd.svg"
   },
   {
     "cca3": "KNA",
@@ -1328,7 +1493,8 @@
     "meaning": "Hope and unity.",
     "mnemonic": "Green-red diagonal with stars",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/kn.svg"
   },
   {
     "cca3": "LCA",
@@ -1336,7 +1502,8 @@
     "meaning": "Island identity.",
     "mnemonic": "Blue with yellow/black triangle",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/lc.svg"
   },
   {
     "cca3": "VCT",
@@ -1344,7 +1511,8 @@
     "meaning": "Island unity.",
     "mnemonic": "Blue-yellow-green + diamonds",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/vc.svg"
   },
   {
     "cca3": "TTO",
@@ -1352,7 +1520,8 @@
     "meaning": "Strength and unity.",
     "mnemonic": "Red with black diagonal stripe",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/tt.svg"
   },
   {
     "cca3": "SUR",
@@ -1360,7 +1529,8 @@
     "meaning": "Unity and progress.",
     "mnemonic": "Green-white-red + yellow star",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/sr.svg"
   },
   {
     "cca3": "GUY",
@@ -1368,7 +1538,8 @@
     "meaning": "Nature and resources.",
     "mnemonic": "Green with red triangle arrow",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/gy.svg"
   },
   {
     "cca3": "PAN",
@@ -1376,7 +1547,8 @@
     "meaning": "Peace and political parties.",
     "mnemonic": "4 squares red/blue stars",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/pa.svg"
   },
   {
     "cca3": "CRI",
@@ -1384,7 +1556,8 @@
     "meaning": "Peace and freedom.",
     "mnemonic": "Like Thailand but thicker red stripe",
     "confused_with": ["THA"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/cr.svg"
   },
   {
     "cca3": "PER",
@@ -1392,7 +1565,8 @@
     "meaning": "Independence and purity.",
     "mnemonic": "Red-white-red vertical",
     "confused_with": ["AUT"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/pe.svg"
   },
   {
     "cca3": "PRY",
@@ -1400,7 +1574,8 @@
     "meaning": "Liberty and independence.",
     "mnemonic": "Red-white-blue + emblem",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/py.svg"
   },
 
   {
@@ -1409,7 +1584,8 @@
     "meaning": "Ocean and sunrise.",
     "mnemonic": "Red sun over blue waves",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/ki.svg"
   },
   {
     "cca3": "MHL",
@@ -1417,7 +1593,8 @@
     "meaning": "Peace and unity.",
     "mnemonic": "Blue with white/orange diagonal",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/mh.svg"
   },
   {
     "cca3": "FSM",
@@ -1425,7 +1602,8 @@
     "meaning": "Unity of states.",
     "mnemonic": "Light blue with 4 white stars",
     "confused_with": ["SOM"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/fm.svg"
   },
   {
     "cca3": "NRU",
@@ -1433,7 +1611,8 @@
     "meaning": "Island position and independence.",
     "mnemonic": "Blue with yellow line + white star",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/nr.svg"
   },
   {
     "cca3": "PLW",
@@ -1441,7 +1620,8 @@
     "meaning": "Moon over ocean.",
     "mnemonic": "Light blue with yellow circle",
     "confused_with": ["JPN"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/pl.svg"
   },
   {
     "cca3": "SLB",
@@ -1449,7 +1629,8 @@
     "meaning": "Sun, land, and sea.",
     "mnemonic": "Blue-green diagonal + yellow stars",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/sb.svg"
   },
   {
     "cca3": "TON",
@@ -1457,7 +1638,8 @@
     "meaning": "Christian heritage.",
     "mnemonic": "Red with white corner cross",
     "confused_with": ["CHE"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ton.svg"
   },
   {
     "cca3": "VUT",
@@ -1465,7 +1647,8 @@
     "meaning": "Tradition and unity.",
     "mnemonic": "Black triangle + boar tusk",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/vu.svg"
   },
   {
     "cca3": "BLR",
@@ -1473,7 +1656,8 @@
     "meaning": "Soviet heritage with traditional ornament pattern.",
     "mnemonic": "Red-green with white-red pattern on side",
     "confused_with": ["RUS"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/by.svg"
   },
   {
     "cca3": "BIH",
@@ -1481,7 +1665,8 @@
     "meaning": "Represents Europe and unity.",
     "mnemonic": "Blue with yellow triangle and white stars",
     "confused_with": ["KOS"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/ba.svg"
   },
   {
     "cca3": "UNK",
@@ -1489,7 +1674,8 @@
     "meaning": "Map of Kosovo with stars representing ethnic groups.",
     "mnemonic": "Blue with yellow map + arc of white stars",
     "confused_with": ["BIH"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/unk.svg"
   },
   {
     "cca3": "CYP",
@@ -1497,7 +1683,8 @@
     "meaning": "Island map and olive branches for peace.",
     "mnemonic": "White with orange island and green branches",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/cy.svg"
   },
   {
     "cca3": "MCO",
@@ -1505,7 +1692,8 @@
     "meaning": "Royal colors of Monaco.",
     "mnemonic": "Red over white (like Poland upside down)",
     "confused_with": ["IDN", "POL"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/mc.svg"
   },
   {
     "cca3": "TGO",
@@ -1513,7 +1701,8 @@
     "meaning": "Freedom and unity.",
     "mnemonic": "Green-yellow stripes + red square with star",
     "confused_with": ["GHA"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/tg.svg"
   },
   {
     "cca3": "STP",
@@ -1521,7 +1710,8 @@
     "meaning": "Independence and unity.",
     "mnemonic": "Green-yellow stripes + red triangle + stars",
     "confused_with": ["TGO"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/st.svg"
   },
   {
     "cca3": "SYC",
@@ -1529,7 +1719,8 @@
     "meaning": "Dynamic progress and unity.",
     "mnemonic": "Fan of blue-yellow-red-white-green rays",
     "confused_with": [],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/sc.svg"
   },
   {
     "cca3": "RUS",
@@ -1537,7 +1728,8 @@
     "meaning": "Pan-Slavic unity.",
     "mnemonic": "White-blue-red stripes",
     "confused_with": ["SRB", "SVK", "SVN"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/ru.svg"
   },
   {
     "cca3": "PAK",
@@ -1545,7 +1737,8 @@
     "meaning": "Islam and minority rights.",
     "mnemonic": "Green with white stripe + crescent and star",
     "confused_with": ["TUR"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/pk.svg"
   },
   {
     "cca3": "PHL",
@@ -1553,7 +1746,8 @@
     "meaning": "Freedom and patriotism.",
     "mnemonic": "Blue-red with white triangle + sun and stars",
     "confused_with": ["CUB"],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/ph.svg"
   },
   {
     "cca3": "MMR",
@@ -1561,7 +1755,8 @@
     "meaning": "Solidarity, peace, and courage.",
     "mnemonic": "Yellow-green-red + white star",
     "confused_with": ["BOL", "ETH"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/mm.svg"
   },
   {
     "cca3": "TLS",
@@ -1569,7 +1764,8 @@
     "meaning": "Struggle for independence.",
     "mnemonic": "Red with black triangle + yellow triangle + star",
     "confused_with": [],
-    "difficulty": 3
+    "difficulty": 3,
+    "flag_url": "https://flagcdn.com/tl.svg"
   },
   {
     "cca3": "TWN",
@@ -1577,6 +1773,7 @@
     "meaning": "Blue sky with white sun over red field.",
     "mnemonic": "Red with blue corner + white sun",
     "confused_with": ["SAM"],
-    "difficulty": 2
+    "difficulty": 2,
+    "flag_url": "https://flagcdn.com/tw.svg"
   }
 ]
