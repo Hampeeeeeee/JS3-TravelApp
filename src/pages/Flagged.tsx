@@ -25,7 +25,6 @@ export default function Flagged() {
   const [guessedFlags, setGuessedFlags] = useState<string[]>([]);
   const [score, setScore] = useState(0);
   const [inputValue, setInputValue] = useState("");
-  const [result, setResult] = useState<"correct" | "incorrect" | null>(null);
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
 
   const {
@@ -68,9 +67,7 @@ export default function Flagged() {
     if (value.toLowerCase() === correctFlag?.toLowerCase()) {
       setGuessedFlags((prev) => [...prev, correctFlag]);
       setScore((prev) => prev + 1);
-      setResult("correct");
       setInputValue("");
-      setTimeout(() => setResult(null), 500);
 
       if (score + 1 === independentCountries.length) {
         setGameOver(true);
