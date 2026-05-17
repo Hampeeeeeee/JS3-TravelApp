@@ -1,4 +1,4 @@
-import styles from "loadspinner.module.css";
+import styles from "./loadspinner.module.css";
 
 type LoadSpinnerProps = {
     size?: "sm" | "md" | "lg";
